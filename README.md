@@ -1,4 +1,4 @@
-# UCPH Assets for TYPO3 cms.
+# UCPH Assets for TYPO3 cms
 
 ## Bootstrap
 Bootstrap framework and custom javaScript files
