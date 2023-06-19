@@ -1,0 +1,24 @@
+{
+    "name": "university-of-copenhagen/ucph-assets",
+    "type": "typo3-cms-extension",
+    "description": "Assets for UCPH TYPO3 cms",
+    "authors": [{
+        "name": "Nanna Ellegaard",
+        "role": "Developer"
+    }],
+    "homepage": "https://www.ku.dk/",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "UniversityOfCopenhagen\\UcphAssets\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "ucph_assets"
+        }
+    }
+}
