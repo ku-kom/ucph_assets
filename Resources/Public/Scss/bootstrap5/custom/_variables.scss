@@ -2,9 +2,13 @@
 // Color system
 // --------------------------------------------------
 
-$ku-red:                        #901a1e;
+$ku-red:                        #901a1e !default;
 
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
-$enable-dark-mode:               false;
+$enable-dark-mode:               false !default;
+
+// Icons
+// Import Bootstrap Icons w/ custom path to fonts folder
+$bootstrap-icons-font-dir: "../../../../node_modules/bootstrap-icons/font/fonts" !default;
