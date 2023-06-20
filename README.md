@@ -24,7 +24,7 @@ And run the following command to listen for changes in the `Src/` folders:
 
 ```
 
-$ npm run watch
+$ npm run start
 
 ```
 

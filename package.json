@@ -14,10 +14,11 @@
 		"css-prefix": "postcss --config build/postcss.config.js --replace \"Resources/Public/Css/Dist/bootstrap.min.css\"",
 		"js-concat": "globcat \"Resources/Public/JavaScript/Src/bootstrap5/custom/**/*.js\" --output \"Resources/Public/JavaScript/Dist/ucph-scripts.js\"",
 		"js-lint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives --ext .js, ",
+		"js-minify-bootstrap": "copyfiles --flat \"./node_modules/bootstrap/dist/js/bootstrap.esm.min.js\" \"Resources/Public/JavaScript/Dist\"",
 		"js-minify": "terser --compress passes=2 --mangle-props --format quote_style=1 --comments \"/^!/\" --output \"Resources/Public/JavaScript/Dist/ucph-scripts.min.js\" \"Resources/Public/JavaScript/Dist/ucph-scripts.js\" --source-map",
 		"css": "npm-run-all css-compile css-prefix",
-		"server": "sirv --dev --no-clear --port 3000",
 		"start": "npm-run-all --parallel watch",
+		"watch-bootstrap": "npm-run-all --parallel js-minify-bootstrap",
 		"watch-js": "onchange \"Resources/Public/JavaScript/Src/bootstrap5/custom/*.js\" -- npm-run-all js-concat js-lint js-minify",
 		"watch-css": "onchange \"Resources/Public/Scss/bootstrap5/**/*.scss\" -- npm-run-all css-compile css-lint css-prefix",
 		"watch": "npm-run-all --parallel watch-*",
@@ -37,23 +38,16 @@
 	},
 	"devDependencies": {
 		"autoprefixer": "^10.4.14",
-		"css-loader": "^6.8.1",
+		"copyfiles": "^2.4.1",
 		"eslint": "^8.38.0",
 		"globcat": "^3.0.1",
-		"nodemon": "^2.0.22",
 		"npm-run-all": "^4.1.5",
 		"onchange": "^7.1.0",
 		"postcss": "^8.4.24",
 		"postcss-cli": "^10.1.0",
-		"postcss-loader": "^7.3.3",
 		"sass": "^1.63.4",
-		"sass-loader": "^13.3.2",
-		"sirv-cli": "^2.0.2",
-		"style-loader": "^3.3.3",
 		"stylelint": "^15.6.0",
 		"stylelint-config-twbs-bootstrap": "^10.0.0",
-		"terser": "^5.17.1",
-		"terser-dir": "^1.0.9",
-		"uglify-js": "^3.17.4"
+		"terser": "^5.17.1"
 	}
 }

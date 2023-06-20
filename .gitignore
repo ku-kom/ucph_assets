@@ -54,5 +54,5 @@ Thumbs.db
 /fileadmin/*
 /uploads/*
 /FIRST_INSTALL
-/node_modules/
+node_modules/
 swiper/
