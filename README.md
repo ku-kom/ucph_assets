@@ -1,7 +1,7 @@
 # UCPH Assets for TYPO3 cms
 
 ## Bootstrap
-Bootstrap framework and custom javaScript files
+Bootstrap framework and custom css and javaScript files
 
 ## Developed for
 TYPO3 v. 11.5, PHP 8.1
@@ -24,15 +24,11 @@ And run the following command to listen for changes in the `Src/` folders:
 
 ```
 
-$ npm run start
+$ npm run watch
 
 ```
 
 The result is available in `Dist/` folders.
-
-## Bugs and feature requests
-
-Have a bug or a feature request? If your problem or idea is not addressed yet, [please open a new issue](https://github.com/ku-kom/ucph_assets/issues).
 
 ## License
 This project is released under the terms of the [MIT license](https://en.wikipedia.org/wiki/MIT_License).

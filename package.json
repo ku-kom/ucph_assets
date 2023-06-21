@@ -17,7 +17,6 @@
 		"js-minify-bootstrap": "copyfiles --flat \"./node_modules/bootstrap/dist/js/bootstrap.esm.min.js\" \"Resources/Public/JavaScript/Dist\"",
 		"js-minify": "terser --compress passes=2 --mangle-props --format quote_style=1 --comments \"/^!/\" --output \"Resources/Public/JavaScript/Dist/ucph-scripts.min.js\" \"Resources/Public/JavaScript/Dist/ucph-scripts.js\" --source-map",
 		"css": "npm-run-all css-compile css-prefix",
-		"start": "npm-run-all --parallel watch",
 		"watch-bootstrap": "npm-run-all --parallel js-minify-bootstrap",
 		"watch-js": "onchange \"Resources/Public/JavaScript/Src/bootstrap5/custom/*.js\" -- npm-run-all js-concat js-lint js-minify",
 		"watch-css": "onchange \"Resources/Public/Scss/bootstrap5/**/*.scss\" -- npm-run-all css-compile css-lint css-prefix",
