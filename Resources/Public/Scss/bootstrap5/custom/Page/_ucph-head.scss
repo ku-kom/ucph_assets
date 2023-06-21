@@ -46,3 +46,12 @@
 .pageheader-spacer {
     height: var(--page-header-height);
 }
+
+.global-search {
+    &.is-open {
+        background-color: $white;
+        top: 0;
+        transform: translateY(0);
+        transition: all .3s ease-in-out;
+    }
+}

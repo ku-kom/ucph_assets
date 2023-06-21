@@ -4,12 +4,6 @@
  * University of Copenhagen, FA Communications, Nanna Ellegaard.
  * ========================================================================*/
 
-//import { Footer } from './ucph_global_footer.js';
-
-/**
- * Check OS reduced motion setting
- */
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 /**
  * Delay function init, e.g. on resizing or orientation change. Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for N milliseconds.
@@ -37,142 +31,23 @@ const debounce = (func, wait, immediate) => {
     };
 }
 
+/**
+ * Check OS reduced motion setting
+ */
+const reduceMotion = () => {
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+
+/**
+* Detect screen size.
+* @returns boolean.
+*/
+const isMobile = () => {
+    return window.matchMedia('(max-width: 991px)').matches;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     'use strict';
-
-    const footerHeading = document.querySelectorAll('.footer-section-content .footer-col-header');
-    class Footer {
-        constructor(footer) {
-            this.footer = footer;
-            this.list = this.footer.nextElementSibling;
-            this.setAriaAttr();
-            this.addEventListeners();
-        }
-
-        /**
-         * Detect screen size.
-         * @returns boolean.
-         */
-        isMobile() {
-            return window.matchMedia('(max-width: 991px)').matches;
-        }
-
-        /**
-         * Add attributes.
-         */
-        setAriaAttr() {
-            //console.log(this.isMobile());
-            this.footer.setAttribute('aria-expanded', this.isMobile() ? 'false' : 'true');
-        }
-
-        /**
-         * Clear footer.
-         */
-        resetFooter() {
-            this.list.style.removeProperty('height');
-            this.list.classList.remove('active');
-        }
-
-        /**
-         * Slide footer columns open or closed.
-         */
-        toggleFooter() {
-            if (!this.list.classList.contains('active')) {
-                /**
-                 * Slide down
-                 */
-                this.list.classList.add('active');
-                this.list.style.height = 'auto';
-
-                let height = this.list.clientHeight + 'px';
-                this.list.style.height = '0';
-                setTimeout(() => {
-                    this.list.style.height = height;
-                }, 0);
-                this.footer.setAttribute('aria-expanded', 'true');
-            } else {
-                /**
-                 * Slide up
-                 */
-                this.list.style.height = '0';
-                this.footer.setAttribute('aria-expanded', 'false');
-
-                /**
-                 * Remove the `active` class when the animation ends
-                 */
-                this.list.addEventListener('transitionend', () => {
-                    this.list.classList.remove('active');
-                }, {
-                    once: true
-                });
-            }
-        }
-
-        addEventListeners() {
-            this.footer.addEventListener('click', () => {
-                this.toggleFooter();
-            });
-
-            window.addEventListener('resize', debounce(() => {
-                this.resetFooter();
-                this.setAriaAttr();
-            }, 150));
-
-            window.addEventListener('orientationchange', debounce(() => {
-                this.resetFooter();
-                this.setAriaAttr();
-            }, 150));
-        }
-    }
-    /**
-     * Assign class to footer headings.
-     */
-    if (footerHeading) {
-        footerHeading.forEach((column) => {
-            const footerEl = new Footer(column);
-        });
-    }
-});
-
-
-window.addEventListener('DOMContentLoaded', () => {
-    'use strict';
-
-    /**
-     * Animate page header
-     */
-    const animatePageHeader = () => {
-        const pageHeader = document.getElementById('page-header');
-        // multiple checks for browser compatibility:
-        let scollPosition = window.pageYOffset || document.documentElement.scrollTop;
-        if (pageHeader) {
-            pageHeader.classList.toggle('is-small', scollPosition > 100);
-        }
-    }
-    animatePageHeader();
-
-    /**
-     * Animate global menu
-     * Hide when scroling down, show when scrolling up
-     */
-    let lastScrollTop = 160;
-    const animateMainmenu = () => {
-        const pageHeader = document.getElementById('global-menu');
-        if (!pageHeader) {
-            return;
-        }
-        let scrollposition = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollposition > lastScrollTop) {
-            // Scrolling down
-            pageHeader.classList.add('is-up');
-        } else if (scrollposition < lastScrollTop) {
-            // Scrolling up
-            pageHeader.classList.remove('is-up');
-        } 
-        // else is horizontal scroll
-        lastScrollTop = scrollposition <= 0 ? 0 : scrollposition;
-    }
-    animateMainmenu();
 
     /**
      * Get height og global menu and set it on page spacer for styling purposes
@@ -207,6 +82,155 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     /**
+     * Run footer
+     */
+    const runFooter = () => {
+        const footerHeading = document.querySelectorAll('.footer-section-content .footer-col-header');
+        class Footer {
+            constructor(footer) {
+                this.footer = footer;
+                this.list = this.footer.nextElementSibling;
+                this.setAriaAttr();
+                this.addEventListeners();
+            }
+
+            /**
+             * Add attributes.
+             */
+            setAriaAttr() {
+                //console.log(this.isMobile());
+                this.footer.setAttribute('aria-expanded', isMobile() ? 'false' : 'true');
+            }
+
+            /**
+             * Clear footer.
+             */
+            resetFooter() {
+                this.list.style.removeProperty('height');
+                this.list.classList.remove('active');
+            }
+
+            /**
+             * Slide footer columns open or closed.
+             */
+            toggleFooter() {
+                if (!this.list.classList.contains('active')) {
+                    /**
+                     * Slide down
+                     */
+                    this.list.classList.add('active');
+                    this.list.style.height = 'auto';
+
+                    let height = this.list.clientHeight + 'px';
+                    this.list.style.height = '0';
+                    setTimeout(() => {
+                        this.list.style.height = height;
+                    }, 0);
+                    this.footer.setAttribute('aria-expanded', 'true');
+                } else {
+                    /**
+                     * Slide up
+                     */
+                    this.list.style.height = '0';
+                    this.footer.setAttribute('aria-expanded', 'false');
+
+                    /**
+                     * Remove the `active` class when the animation ends
+                     */
+                    this.list.addEventListener('transitionend', () => {
+                        this.list.classList.remove('active');
+                    }, {
+                        once: true
+                    });
+                }
+            }
+
+            addEventListeners() {
+                this.footer.addEventListener('click', () => {
+                    this.toggleFooter();
+                });
+
+                window.addEventListener('resize', debounce(() => {
+                    this.resetFooter();
+                    this.setAriaAttr();
+                }, 150));
+
+                window.addEventListener('orientationchange', debounce(() => {
+                    this.resetFooter();
+                    this.setAriaAttr();
+                }, 150));
+            }
+        }
+        /**
+         * Assign class to footer headings.
+         */
+        if (footerHeading) {
+            footerHeading.forEach((column) => {
+                const footerEl = new Footer(column);
+            });
+        }
+    }
+    runFooter();
+    
+    document.addEventListener('resize', debounce(function () {
+        getGlobalMenuHeight();
+    }, 150));
+
+    document.addEventListener('orientationchange', debounce(function () {
+        getGlobalMenuHeight();
+    }, 150));
+});
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    /**
+ * Animate page header
+ */
+    const animatePageHeader = () => {
+        const pageHeader = document.getElementById('page-header');
+        // multiple checks for browser compatibility:
+        let scollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        if (pageHeader) {
+            pageHeader.classList.toggle('is-small', scollPosition > 100);
+        }
+    }
+    animatePageHeader();
+
+    /**
+     * Animate global menu
+     * Hide when scroling down, show when scrolling up
+     */
+    let lastScrollTop = 160;
+    const animateMainmenu = () => {
+        const pageHeader = document.getElementById('global-menu');
+        if (!pageHeader) {
+            return;
+        }
+        let scrollposition = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollposition > lastScrollTop) {
+            // Scrolling down
+            pageHeader.classList.add('is-up');
+        } else if (scrollposition < lastScrollTop) {
+            // Scrolling up
+            pageHeader.classList.remove('is-up');
+        }
+        // else is horizontal scroll
+        lastScrollTop = scrollposition <= 0 ? 0 : scrollposition;
+    }
+    animateMainmenu();
+
+    /**
+   * Detect screen size.
+   * @returns boolean.
+   */
+    const setSearchWidth = () => {
+        const searchBox = document.querySelector('.global-serach');
+        searchBox.classList.toggle('is-open', isMobile());
+        console.log(isMobile());
+    }
+    setSearchWidth();
+    /**
      * Link to open accordion
      */
     const slideToOpenAccordion = () => {
@@ -220,7 +244,7 @@ window.addEventListener('DOMContentLoaded', () => {
         /**
          * Check for accessibility settings
          */
-        if (reduceMotion.matches) {
+        if (reduceMotion()) {
             return;
         }
         if (window.location.hash !== '') {
@@ -246,23 +270,22 @@ window.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         animatePageHeader();
         animateMainmenu();
-        scrollToTopIcon();
     }, {
         passive: true
     });
 
     window.addEventListener('resize', debounce(function () {
+        //slideToOpenAccordion();
         animatePageHeader();
         animateMainmenu();
-        getGlobalMenuHeight();
-        //slideToOpenAccordion();
+        setSearchWidth();
     }, 150));
 
     window.addEventListener('orientationchange', debounce(function () {
+        //slideToOpenAccordion();
         animatePageHeader();
         animateMainmenu();
-        getGlobalMenuHeight();
-        //slideToOpenAccordion();
+        setSearchWidth();
     }, 150));
 
 });
