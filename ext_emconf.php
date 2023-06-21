@@ -4,7 +4,7 @@
  * Extension Manager/Repository config file for ext "ucph_assets".
  */
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'KU scroll indicator',
+    'title' => 'UCPH TYPO3 assets',
     'description' => 'Adds scroll progress bar at the top of the page.',
     'category' => 'templates',
     'constraints' => [

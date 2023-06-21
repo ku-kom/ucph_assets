@@ -1,3 +1,7 @@
-body {
-    color: #f90;
+.top-navigation {
+    position: fixed;
+    z-index: $zindex-sticky;
+    width: 100%;
+    background-color: $white;
+    transition: margin-top .5s, box-shadow .4s;
 }

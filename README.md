@@ -12,7 +12,7 @@ TYPO3 v. 11.5, PHP 8.1
 
 
 ## Development build
-Build javascript and css files from their `Src/` folders.
+Build javascript and scss files from their `Src/` folders.
 Install all dependencies in repo's root:
 
 ```

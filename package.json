@@ -14,7 +14,7 @@
 		"css-prefix": "postcss --config build/postcss.config.js --replace \"Resources/Public/Css/Dist/bootstrap.min.css\"",
 		"js-concat": "globcat \"Resources/Public/JavaScript/Src/bootstrap5/custom/**/*.js\" --output \"Resources/Public/JavaScript/Dist/ucph-scripts.js\"",
 		"js-lint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives --ext .js, ",
-		"js-minify-bootstrap": "copyfiles --flat \"./node_modules/bootstrap/dist/js/bootstrap.esm.min.js\" \"Resources/Public/JavaScript/Dist\"",
+		"js-minify-bootstrap": "copyfiles --flat \"./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js\" \"Resources/Public/JavaScript/Dist\"",
 		"js-minify": "terser --compress passes=2 --mangle-props --format quote_style=1 --comments \"/^!/\" --output \"Resources/Public/JavaScript/Dist/ucph-scripts.min.js\" \"Resources/Public/JavaScript/Dist/ucph-scripts.js\" --source-map",
 		"css": "npm-run-all css-compile css-prefix",
 		"watch-bootstrap": "npm-run-all --parallel js-minify-bootstrap",
