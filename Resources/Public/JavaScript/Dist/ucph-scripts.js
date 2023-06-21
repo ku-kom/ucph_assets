@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
          * @returns boolean.
          */
         isMobile() {
-            return window.matchMedia('(max-width: 767px)').matches;
+            return window.matchMedia('(max-width: 991px)').matches;
         }
 
         /**
@@ -153,14 +153,24 @@ window.addEventListener('DOMContentLoaded', () => {
 
     /**
      * Animate global menu
+     * Hide when scroling down, show when scrolling up
      */
+    let lastScrollTop = 160;
     const animateMainmenu = () => {
         const pageHeader = document.getElementById('global-menu');
-        // multiple checks for browser compatibility:
-        let scollPosition = window.pageYOffset || document.documentElement.scrollTop;
-        if (pageHeader) {
-            pageHeader.classList.toggle('is-up', scollPosition > 200);
+        if (!pageHeader) {
+            return;
         }
+        let scrollposition = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollposition > lastScrollTop) {
+            // Scrolling down
+            pageHeader.classList.add('is-up');
+        } else if (scrollposition < lastScrollTop) {
+            // Scrolling up
+            pageHeader.classList.remove('is-up');
+        } 
+        // else is horizontal scroll
+        lastScrollTop = scrollposition <= 0 ? 0 : scrollposition;
     }
     animateMainmenu();
 
@@ -172,7 +182,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const pageHeaderSpacer = document.querySelector('.pageheader-spacer');
         if (pageHeader && pageHeaderSpacer) {
             pageHeaderSpacer.setAttribute('style', '--page-header-height: ' + (pageHeader.offsetHeight) + 'px');
-        } 
+        }
     }
     getGlobalMenuHeight();
 

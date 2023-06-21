@@ -55,5 +55,6 @@
 @import "../../../../node_modules/bootstrap-icons/font/bootstrap-icons";
 
 // Custom UCPH styles
-@import "custom/ucph-head";
-@import "custom/ucph-footer";
+@import "custom/page/ucph-head";
+@import "custom/page/ucph-footer";
+@import "custom/page/scroll-to-top";
