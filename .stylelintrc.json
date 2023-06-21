@@ -32,7 +32,9 @@
         ],
         "stylistic/indentation": null,
         "stylistic/no-missing-end-of-source-newline": null,
-        "scss/selector-no-union-class-name": true
+        "stylistic/function-comma-space-after" : null,
+        "scss/selector-no-union-class-name": true,
+        "order/properties-order": null
       }
     }
   ]

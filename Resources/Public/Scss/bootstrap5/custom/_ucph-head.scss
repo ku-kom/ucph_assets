@@ -1,7 +1,48 @@
-.top-navigation {
+.header-navigation {
     position: fixed;
     z-index: $zindex-sticky;
     width: 100%;
     background-color: $white;
     transition: margin-top .5s, box-shadow .4s;
+}
+
+.global-topbar {
+    position: relative;
+    display: block;
+    z-index: 1000;
+    background-color: $white;
+    box-shadow: 0 0 10px rgba($black, .15);
+    height: 100%;
+    transition: all $global-menu-transition;
+}
+
+.global-menu {
+    position: relative;
+    top: 0;
+    max-height: 100%;
+    width: 100%;
+    transition: top $global-menu-transition;
+
+    &.is-up {
+        max-height: 0;
+        top: -115px;
+    }
+}
+
+.global-nav {
+    background-color: $global-menu-bg;
+    box-shadow: 0 2px 10px rgba($black, .15);
+    left: 0;
+    max-height: 100%;
+    overflow: visible;
+    position: relative;
+    top: 0;
+    transition: all $global-menu-transition;
+    width: 100%;
+    z-index: 800;
+}
+
+// Push down content below sticky page header
+.pageheader-spacer {
+    height: var(--page-header-height);
 }

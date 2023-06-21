@@ -1,8 +1,16 @@
+:root {
+    --page-header-height: 2rem;
+}
+
 //
 // Color system
 // --------------------------------------------------
 
 $ku-red:                        #901a1e !default;
+$gray-f5:                       #f5f5f5 !default;
+
+$global-menu-transition:        .35s cubic-bezier(.445, .05, .55, .95) !default;
+$global-menu-bg:                $gray-f5 !default;
 
 // Options
 //

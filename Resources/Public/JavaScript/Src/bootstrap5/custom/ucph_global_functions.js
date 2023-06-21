@@ -152,6 +152,31 @@ window.addEventListener('DOMContentLoaded', () => {
     animatePageHeader();
 
     /**
+     * Animate global menu
+     */
+    const animateMainmenu = () => {
+        const pageHeader = document.getElementById('global-menu');
+        // multiple checks for browser compatibility:
+        let scollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        if (pageHeader) {
+            pageHeader.classList.toggle('is-up', scollPosition > 200);
+        }
+    }
+    animateMainmenu();
+
+    /**
+     * Get height og global menu and set it on page spacer for styling purposes
+     */
+    const getGlobalMenuHeight = () => {
+        const pageHeader = document.querySelector('.header-navigation');
+        const pageHeaderSpacer = document.querySelector('.pageheader-spacer');
+        if (pageHeader && pageHeaderSpacer) {
+            pageHeaderSpacer.setAttribute('style', '--page-header-height: ' + (pageHeader.offsetHeight) + 'px');
+        } 
+    }
+    getGlobalMenuHeight();
+
+    /**
      * Show/hide "scroll to top" if it exists
      */
     const scrollToTopIcon = () => {
@@ -210,22 +235,24 @@ window.addEventListener('DOMContentLoaded', () => {
     // Listen to "scroll to top" on scroll
     window.addEventListener('scroll', () => {
         animatePageHeader();
+        animateMainmenu();
         scrollToTopIcon();
     }, {
         passive: true
     });
 
-
+    window.addEventListener('resize', debounce(function () {
+        animatePageHeader();
+        animateMainmenu();
+        getGlobalMenuHeight();
+        //slideToOpenAccordion();
+    }, 150));
 
     window.addEventListener('orientationchange', debounce(function () {
         animatePageHeader();
+        animateMainmenu();
+        getGlobalMenuHeight();
         //slideToOpenAccordion();
     }, 150));
-
-    window.addEventListener('resize', debounce(function () {
-        animatePageHeader();
-        //slideToOpenAccordion();
-    }, 150));
-
 
 });
