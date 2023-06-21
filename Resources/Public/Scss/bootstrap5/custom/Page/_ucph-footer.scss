@@ -33,16 +33,16 @@
             }
 
             &.active {
-                transition: height 0.4s cubic-bezier(0.02, 0.01, 0.47, 1);
+                transition: height .4s cubic-bezier(.02, .01, .47, 1);
                 overflow: hidden;
             }
 
-            li {
-                padding: .7rem 1rem;
+        }
+        li {
+            padding: .7rem 1rem;
 
-                &+li {
-                    border-top: 1px solid $gray-400;
-                }
+            + li {
+                border-top: 1px solid $gray-400;
             }
         }
     }
@@ -51,7 +51,7 @@
         padding: .7rem 1rem;
         margin: 0;
 
-        &[aria-expanded=false] {
+        &[aria-expanded="false"] {
             border-bottom: 1px solid $white;
         }
     }
