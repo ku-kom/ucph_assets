@@ -62,6 +62,26 @@ document.addEventListener('DOMContentLoaded', () => {
     getGlobalMenuHeight();
 
     /**
+     * Detect click on page search overlay
+     */
+    const searchOverlay = () => {
+        const searchOverlayBtnOpen = document.querySelector('#headerSearchOpen');
+        const searchOverlayBtnClose = document.querySelector('#headerSearchClose');
+        const searchOverlay = document.querySelector('.global-search');
+        if (searchOverlayBtnOpen) {
+            searchOverlayBtnOpen.addEventListener('click', () => {
+                searchOverlay.classList.add('is-open');
+            });
+        }
+        if (searchOverlayBtnClose) {
+            searchOverlayBtnClose.addEventListener('click', () => {
+                searchOverlay.classList.remove('is-open');
+            });
+        }
+    }
+    searchOverlay();
+
+    /**
      * Show/hide "scroll to top" if it exists
      */
     const scrollToTopIcon = () => {
@@ -171,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     runFooter();
-    
+
     document.addEventListener('resize', debounce(function () {
         getGlobalMenuHeight();
     }, 150));
@@ -184,9 +204,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
+
     /**
- * Animate page header
- */
+     * Animate page header
+     */
     const animatePageHeader = () => {
         const pageHeader = document.getElementById('page-header');
         // multiple checks for browser compatibility:
@@ -220,16 +241,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     animateMainmenu();
 
-    /**
-   * Detect screen size.
-   * @returns boolean.
-   */
-    const setSearchWidth = () => {
-        const searchBox = document.querySelector('.global-serach');
-        searchBox.classList.toggle('is-open', isMobile());
-        console.log(isMobile());
-    }
-    setSearchWidth();
     /**
      * Link to open accordion
      */
@@ -278,14 +289,12 @@ window.addEventListener('DOMContentLoaded', () => {
         //slideToOpenAccordion();
         animatePageHeader();
         animateMainmenu();
-        setSearchWidth();
     }, 150));
 
     window.addEventListener('orientationchange', debounce(function () {
         //slideToOpenAccordion();
         animatePageHeader();
         animateMainmenu();
-        setSearchWidth();
     }, 150));
 
 });
