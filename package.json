@@ -8,7 +8,7 @@
 	"license": "MIT",
 	"main": "index.js",
 	"scripts": {
-		"build": "npm run css",
+		"icon-copy": "copyfiles --flat \"./node_modules/bootstrap-icons/font/fonts/**/*\" \"Resources/Public/Fonts/bootstrap-icons\"",
 		"css-compile": "sass --style compressed --source-map --embed-sources --no-error-css \"Resources/Public/Scss/bootstrap5/bootstrap.scss\" \"Resources/Public/Css/Dist/bootstrap.min.css\"",
 		"css-lint": "stylelint \"Resources/Public/Scss/bootstrap5/\"",
 		"css-prefix": "postcss --config build/postcss.config.js --replace \"Resources/Public/Css/Dist/bootstrap.min.css\"",
@@ -17,6 +17,7 @@
 		"js-get-bootstrap": "copyfiles --flat \"./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js\" \"./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js.map\" \"Resources/Public/JavaScript/Dist\"",
 		"js-minify": "terser --compress passes=2 --mangle-props --format quote_style=1 --comments \"/^!/\" --output \"Resources/Public/JavaScript/Dist/ucph-scripts.min.js\" \"Resources/Public/JavaScript/Dist/ucph-scripts.js\" --source-map",
 		"css": "npm-run-all css-compile css-prefix",
+		"watch-icons": "npm-run-all --parallel icon-copy",
 		"watch-bootstrap": "npm-run-all --parallel js-get-bootstrap",
 		"watch-js": "onchange \"Resources/Public/JavaScript/Src/bootstrap5/custom/*.js\" -- npm-run-all js-concat js-lint js-minify",
 		"watch-css": "onchange \"Resources/Public/Scss/bootstrap5/**/*.scss\" -- npm-run-all css-compile css-lint css-prefix",
