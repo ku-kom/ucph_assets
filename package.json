@@ -45,9 +45,9 @@
 		"onchange": "^7.1.0",
 		"postcss": "^8.4.24",
 		"postcss-cli": "^10.1.0",
-		"sass": "^1.63.4",
-		"stylelint": "^15.6.0",
+		"sass": "^1.63.6",
+		"stylelint": "^15.9.0",
 		"stylelint-config-twbs-bootstrap": "^10.0.0",
-		"terser": "^5.17.1"
+		"terser": "^5.18.1"
 	}
 }
