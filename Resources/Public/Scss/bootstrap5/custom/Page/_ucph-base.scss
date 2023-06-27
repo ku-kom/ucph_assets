@@ -10,4 +10,9 @@ body {
 
 .main-section {
     flex: 1 0 auto;
+
+    img {
+        @extend .img-fluid;
+    }
 }
+
