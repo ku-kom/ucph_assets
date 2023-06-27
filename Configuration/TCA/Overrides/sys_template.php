@@ -9,6 +9,6 @@ call_user_func(function ($extKey='ucph_assets') {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
         $extKey,
         'Configuration/TypoScript',
-        'UCPH assets'
+        'UCPH TYPO3 assets'
     );
 });

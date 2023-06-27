@@ -44,7 +44,7 @@
 
 // Push down content below sticky page header
 .pageheader-spacer {
-    height: var(--page-header-height);
+    min-height: var(--page-header-height);
 }
 
 // Global search form
