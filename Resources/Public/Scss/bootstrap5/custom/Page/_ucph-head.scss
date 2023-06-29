@@ -5,14 +5,13 @@
     top: 0;
     left: -999px;
     transform: translateY(-40px);
-    transition: transform .2s;
+    transition: transform .2s $global-menu-transition;
     z-index: $zindex-sticky + 20;
     background-color: $white;
 
     &:focus-within {
         left: 0;
         transform: translateY(0);
-        transition: transform .2s;
         opacity: 1;
     }
 }
