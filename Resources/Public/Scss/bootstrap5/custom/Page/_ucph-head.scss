@@ -93,10 +93,6 @@
     padding-left: 0;
 }
 
-.nav-link {
-    color: $black;
-}
-
 @include media-breakpoint-down(lg) {
     .global-search {
         position: absolute;
