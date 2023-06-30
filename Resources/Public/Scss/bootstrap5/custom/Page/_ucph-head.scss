@@ -58,6 +58,17 @@
     transition: all $global-menu-transition-duration $global-menu-transition;
     width: 100%;
     z-index: $zindex-sticky - 40;
+
+    @include media-breakpoint-down(lg) {
+        .navbar {
+            justify-content: flex-end;
+        }
+
+        .offcanvas {
+            --#{$prefix}offcanvas-width: 80%;
+            margin-top: var(--page-header-height);
+        }
+    }
 }
 
 // Push down content below sticky page header
@@ -85,16 +96,12 @@
     padding: .75rem;
     width: 100%;
     transform: translateY(-200%);
-    transition: all .3s ease-in-out;
+    transition: transform .3s ease-in-out;
 }
 
 .globalmenu {
     list-style-type: none;
     padding-left: 0;
-}
-
-.nav-link {
-    color: $black;
 }
 
 @include media-breakpoint-down(lg) {
@@ -104,13 +111,14 @@
         left: 0;
         width: 100%;
         z-index: 30;
+        display: flex;
+        background-color: $white;
 
         &.is-open {
             display: flex;
             flex-shrink: 1;
             align-items: center;
             gap: .75rem;
-            background-color: $white;
             border-bottom: 1px solid $gray-200;
             box-shadow: 0 0 10px rgba($black, .15);
             transform: translateY(0);
