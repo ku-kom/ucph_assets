@@ -4,7 +4,8 @@
 }
 
 .footer-col-header {
-    @include font-size(1.5rem);
+    @include font-size(1.2rem);
+    margin: 0;
 }
 
 .footer-section-content {
@@ -55,7 +56,6 @@
 
     .footer-col-header {
         padding: rfs-fluid-value(1rem);
-        margin: 0;
         border-bottom: 1px solid $white;
         cursor: pointer;
 
@@ -84,6 +84,9 @@
     .footer-section-content {
         ul {
             display: block;
+        }
+        & + & {
+            margin-top: rfs-fluid-value(.5rem);
         }
     }
 }
