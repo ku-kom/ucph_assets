@@ -31,6 +31,8 @@
           }
         ],
         "stylistic/indentation": null,
+        "stylistic/selector-combinator-space-before": null,
+        "stylistic/selector-combinator-space-after": null,
         "stylistic/no-missing-end-of-source-newline": null,
         "stylistic/function-comma-space-after" : null,
         "scss/selector-no-union-class-name": true,

@@ -16,6 +16,8 @@
     }
 
     a {
+        display: block;
+
         &:any-link {
             color: inherit;
         }
@@ -26,13 +28,15 @@
     .footer-container {
         padding: 0;
 
-        :is(.container, .row) {
+        :is(.container-lg, .row) {
             --bs-gutter-x: 0;
         }
     }
 
     .footer-section-content {
         ul {
+            background-color: $white;
+            color: $body-color;
 
             &:not(.active) {
                 display: none;
@@ -46,16 +50,23 @@
         }
 
         li {
-            padding: .5rem 1rem;
-
             +li {
                 border-top: 1px solid $gray-400;
+            }
+        }
+
+        a {
+            padding: .5rem $grid-gutter-width;
+
+            &:active,
+            &:focus {
+                background-color: $gray-400;
             }
         }
     }
 
     .footer-col-header {
-        padding: rfs-fluid-value(1rem);
+        padding: 1rem $grid-gutter-width;
         border-bottom: 1px solid $white;
         cursor: pointer;
 
@@ -85,7 +96,8 @@
         ul {
             display: block;
         }
-        & + & {
+
+        &+& {
             margin-top: rfs-fluid-value(.5rem);
         }
     }
