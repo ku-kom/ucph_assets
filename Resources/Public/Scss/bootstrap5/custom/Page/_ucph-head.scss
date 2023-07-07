@@ -62,6 +62,13 @@
 // Push down content below sticky page header
 .pageheader-spacer {
     min-height: var(--page-header-height);
+    margin-top: 1rem;
+}
+
+// Logo area
+.logo-area {
+    display: flex;
+    align-items: center;
 }
 
 // Global search form
@@ -134,7 +141,8 @@
     }
 
     .btn-searchoverlay-open,
-    .btn-searchoverlay-close {
+    .btn-searchoverlay-close,
+    .navbar-toggler {
         display: none;
     }
 
