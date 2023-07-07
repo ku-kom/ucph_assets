@@ -1,0 +1,80 @@
+:root {
+--frame-color: inherit;
+--frame-link-color: inherit;
+--frame-link-hover-color: inherit;
+--frame-background: transparent;
+--frame-outer-spacing-before: 0;
+--frame-outer-spacing-after: 0;
+--frame-outer-spacing-variant-none: 0rem;
+--frame-outer-spacing-variant-extra-small: 1rem;
+--frame-outer-spacing-variant-small: 1.5rem;
+--frame-outer-spacing-variant-medium: 2rem;
+--frame-outer-spacing-variant-large: 2.5rem;
+--frame-outer-spacing-variant-extra-large: 3rem;
+}
+
+.frame {
+    position: relative;
+    margin-top: var(--frame-outer-spacing-before);
+    margin-bottom: var(--frame-outer-spacing-after);
+    // padding-top: var(--frame-spacing);
+    // padding-bottom: var(--frame-spacing);
+    color: var(--frame-color);
+    background: var(--frame-background);
+    // --frame-spacing: var(--frame-spacing-xs);
+}
+
+.frame-background {
+    &-subset_color_1 {
+        background-color: var(--frame-background);
+        color: var(--frame-color);
+    }
+}
+
+.frame-space-before-none {
+    --frame-outer-spacing-before: var(--frame-outer-spacing-variant-none)
+}
+
+.frame-space-after-none {
+    --frame-outer-spacing-after: var(--frame-outer-spacing-variant-none)
+}
+
+.frame-space-before-extra-small {
+    --frame-outer-spacing-before: var(--frame-outer-spacing-variant-extra-small)
+}
+
+.frame-space-after-extra-small {
+    --frame-outer-spacing-after: var(--frame-outer-spacing-variant-extra-small)
+}
+
+.frame-space-before-small {
+    --frame-outer-spacing-before: var(--frame-outer-spacing-variant-small)
+}
+
+.frame-space-after-small {
+    --frame-outer-spacing-after: var(--frame-outer-spacing-variant-small)
+}
+
+.frame-space-before-medium {
+    --frame-outer-spacing-before: var(--frame-outer-spacing-variant-medium)
+}
+
+.frame-space-after-medium {
+    --frame-outer-spacing-after: var(--frame-outer-spacing-variant-medium)
+}
+
+.frame-space-before-large {
+    --frame-outer-spacing-before: var(--frame-outer-spacing-variant-large)
+}
+
+.frame-space-after-large {
+    --frame-outer-spacing-after: var(--frame-outer-spacing-variant-large)
+}
+
+.frame-space-after-extra-large {
+    --frame-outer-spacing-after: var(--frame-outer-spacing-variant-extra-large);
+}
+
+.frame-space-before-extra-large {
+    --frame-outer-spacing-before: var(--frame-outer-spacing-variant-extra-large);
+}

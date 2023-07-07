@@ -1,0 +1,33 @@
+.color-set-1 {}
+
+.color-set-2 {
+    .subset_color_1 {
+        --frame-background: #f90;
+        --frame-color: #{$black};
+        --frame-link-color:#{$black};
+        --frame-link-hover-color:#{$black};
+    }
+
+    .subset_color_2 {
+        --frame-background: #984e09;
+        --frame-color: #{$white};
+
+    }
+
+    .subset_color_3 {
+        --frame-background: #980917;
+        --frame-color: #{$white};
+    }
+
+    .subset_color_4 {
+        --frame-background: #0d6efd;
+        --frame-color: #{$white};
+    }
+
+    .subset_color_5 {
+        --frame-background: #1aca02;
+        --frame-color: #{$white};
+    }
+}
+
+.color-set-3 {}
