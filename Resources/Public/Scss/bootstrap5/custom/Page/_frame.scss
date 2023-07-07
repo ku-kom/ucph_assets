@@ -1,17 +1,43 @@
+// Frame padding
+$frame-inner-spacing: 1.75rem !default;
+$frame-inner-spacing-small: .75rem !default;
+$frame-inner-spacing-scaling: () !default;
+$frame-inner-spacing-scaling: map-merge((xs: 1,
+        sm: 1.1,
+        md: 1.2,
+        lg: 1.3,
+        xl: 1.4),
+    $frame-inner-spacing-scaling);
+
+// Frame margin
+$frame-outer-spacing: 1rem !default;
+$frame-outer-spacing-scaling: () !default;
+$frame-outer-spacing-scaling: map-merge(('none': 0,
+        'extra-small': .8,
+        'small': 1,
+        'medium': 1.5,
+        'large': 2,
+        'extra-large': 3),
+    $frame-outer-spacing-scaling);
+
 :root {
     --frame-color: inherit;
-    --frame-link-color: inherit;
-    --frame-link-hover-color: inherit;
+    --frame-link-color: var(--bs-link-color-rgb);
+    --frame-link-hover-color: var(--bs-link-hover-color-rgb);
     --frame-background: transparent;
-    --frame-spacing: 1rem;
+    --frame-spacing: #{$frame-inner-spacing};
+
+    @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
+        --frame-spacing-#{$breakpoint}: #{$frame-inner-spacing * map-get($frame-inner-spacing-scaling, $breakpoint)};
+        --frame-spacing-small-#{$breakpoint}: #{$frame-inner-spacing-small * map-get($frame-inner-spacing-scaling, $breakpoint)};
+    }
+
     --frame-outer-spacing-before: 0;
     --frame-outer-spacing-after: 0;
-    --frame-outer-spacing-variant-none: 0rem;
-    --frame-outer-spacing-variant-extra-small: 1rem;
-    --frame-outer-spacing-variant-small: 1.5rem;
-    --frame-outer-spacing-variant-medium: 2rem;
-    --frame-outer-spacing-variant-large: 2.5rem;
-    --frame-outer-spacing-variant-extra-large: 3rem;
+
+    @each $variant in map-keys($frame-outer-spacing-scaling) {
+        --frame-outer-spacing-variant-#{$variant}: #{$frame-outer-spacing * map-get($frame-outer-spacing-scaling, $variant)};
+    }
 }
 
 .frame {
@@ -22,35 +48,26 @@
     padding-bottom: var(--frame-spacing);
     color: var(--frame-color);
     background: var(--frame-background);
+
+
+    @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
+        @include media-breakpoint-up($breakpoint) {
+            --frame-spacing: var(--frame-spacing-#{$breakpoint});
+        }
+    }
 }
 
+// Frame background color
 .frame-background {
-    &-subset_color_1 {
-        background-color: var(--frame-background);
-        color: var(--frame-color);
-    }
-
-    &-subset_color_2 {
-        background-color: var(--frame-background);
-        color: var(--frame-color);
-    }
-
-    &-subset_color_3 {
-        background-color: var(--frame-background);
-        color: var(--frame-color);
-    }
-
-    &-subset_color_4 {
-        background-color: var(--frame-background);
-        color: var(--frame-color);
-    }
-
-    &-subset_color_5 {
-        background-color: var(--frame-background);
-        color: var(--frame-color);
-    }
+    @include cssVariables(subset_color_1);
+    @include cssVariables(subset_color_2);
+    @include cssVariables(subset_color_3);
+    @include cssVariables(subset_color_4);
+    @include cssVariables(subset_color_5);
+    @include cssVariables(subset_color_6);
 }
 
+// Frame indent styles
 .frame-indent {
     .content-row {
         margin-left: 3%;
@@ -73,50 +90,14 @@
     }
 }
 
-.frame-space-before-none {
-    --frame-outer-spacing-before: var(--frame-outer-spacing-variant-none)
-}
+// Space before and after
+@each $name,
+$scaling in $frame-outer-spacing-scaling {
+    .frame-space-before-#{$name} {
+        --frame-outer-spacing-before: var(--frame-outer-spacing-variant-#{$name});
+    }
 
-.frame-space-after-none {
-    --frame-outer-spacing-after: var(--frame-outer-spacing-variant-none)
-}
-
-.frame-space-before-extra-small {
-    --frame-outer-spacing-before: var(--frame-outer-spacing-variant-extra-small)
-}
-
-.frame-space-after-extra-small {
-    --frame-outer-spacing-after: var(--frame-outer-spacing-variant-extra-small)
-}
-
-.frame-space-before-small {
-    --frame-outer-spacing-before: var(--frame-outer-spacing-variant-small)
-}
-
-.frame-space-after-small {
-    --frame-outer-spacing-after: var(--frame-outer-spacing-variant-small)
-}
-
-.frame-space-before-medium {
-    --frame-outer-spacing-before: var(--frame-outer-spacing-variant-medium)
-}
-
-.frame-space-after-medium {
-    --frame-outer-spacing-after: var(--frame-outer-spacing-variant-medium)
-}
-
-.frame-space-before-large {
-    --frame-outer-spacing-before: var(--frame-outer-spacing-variant-large)
-}
-
-.frame-space-after-large {
-    --frame-outer-spacing-after: var(--frame-outer-spacing-variant-large)
-}
-
-.frame-space-after-extra-large {
-    --frame-outer-spacing-after: var(--frame-outer-spacing-variant-extra-large);
-}
-
-.frame-space-before-extra-large {
-    --frame-outer-spacing-before: var(--frame-outer-spacing-variant-extra-large);
+    .frame-space-after-#{$name} {
+        --frame-outer-spacing-after: var(--frame-outer-spacing-variant-#{$name});
+    }
 }

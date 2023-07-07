@@ -1,0 +1,15 @@
+// Mixin for css color variables
+@mixin cssVariables($name) {
+    &-#{$name} {
+      background-color: var(--frame-background);
+        color: var(--frame-color);
+
+        a:not([class]) {
+            color: var(--frame-link-color);
+
+            &:hover {
+                color: var(--frame-link-hover-color);
+            }
+        }
+    }
+  }
