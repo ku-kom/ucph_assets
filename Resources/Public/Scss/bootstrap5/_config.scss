@@ -1,9 +1,11 @@
 // Import needed Bootstrap Files
+
+// Custom UCPH variables
+@import "mixins";
+@import "variables";
+
 // DO NOT change the order of the imports
 @import "../../../../node_modules/bootstrap/scss/functions";
 @import "../../../../node_modules/bootstrap/scss/variables";
 @import "../../../../node_modules/bootstrap/scss/variables-dark";
 
-// Custom UCPH variables
-@import "mixins";
-@import "variables";

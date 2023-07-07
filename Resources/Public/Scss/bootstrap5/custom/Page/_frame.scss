@@ -21,10 +21,10 @@ $frame-outer-spacing-scaling: map-merge(('none': 0,
     $frame-outer-spacing-scaling);
 
 :root {
-    --frame-color: inherit;
+    --frame-color: var(--bs-body-color);
     --frame-link-color: var(--bs-link-color-rgb);
     --frame-link-hover-color: var(--bs-link-hover-color-rgb);
-    --frame-background: transparent;
+    --frame-background: #{$white};
     --frame-spacing: #{$frame-inner-spacing};
 
     @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
