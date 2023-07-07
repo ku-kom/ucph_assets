@@ -20,7 +20,7 @@
 		"watch-icons": "npm-run-all --parallel icon-copy",
 		"watch-bootstrap": "npm-run-all --parallel js-get-bootstrap",
 		"watch-js": "onchange \"Resources/Public/JavaScript/Src/bootstrap5/custom/*.js\" -- npm-run-all js-concat js-lint js-minify",
-		"watch-css": "onchange \"Resources/Public/Scss/bootstrap5/**/*.scss\" -- npm-run-all css-compile css-lint css-prefix",
+		"watch-css": "onchange \"Resources/Public/Scss/bootstrap5/**/*.scss\" -- npm-run-all css-compile css-prefix",
 		"watch": "npm-run-all --parallel watch-*",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
@@ -43,10 +43,10 @@
 		"globcat": "^3.0.1",
 		"npm-run-all": "^4.1.5",
 		"onchange": "^7.1.0",
-		"postcss": "^8.4.24",
+		"postcss": "^8.4.25",
 		"postcss-cli": "^10.1.0",
 		"sass": "^1.63.6",
-		"stylelint": "^15.9.0",
+		"stylelint": "^15.9.1",
 		"stylelint-config-twbs-bootstrap": "^11.0.0",
 		"terser": "^5.18.2"
 	}
