@@ -1,17 +1,17 @@
 :root {
---frame-color: inherit;
---frame-link-color: inherit;
---frame-link-hover-color: inherit;
---frame-background: transparent;
---frame-spacing: 1rem;
---frame-outer-spacing-before: 0;
---frame-outer-spacing-after: 0;
---frame-outer-spacing-variant-none: 0rem;
---frame-outer-spacing-variant-extra-small: 1rem;
---frame-outer-spacing-variant-small: 1.5rem;
---frame-outer-spacing-variant-medium: 2rem;
---frame-outer-spacing-variant-large: 2.5rem;
---frame-outer-spacing-variant-extra-large: 3rem;
+    --frame-color: inherit;
+    --frame-link-color: inherit;
+    --frame-link-hover-color: inherit;
+    --frame-background: transparent;
+    --frame-spacing: 1rem;
+    --frame-outer-spacing-before: 0;
+    --frame-outer-spacing-after: 0;
+    --frame-outer-spacing-variant-none: 0rem;
+    --frame-outer-spacing-variant-extra-small: 1rem;
+    --frame-outer-spacing-variant-small: 1.5rem;
+    --frame-outer-spacing-variant-medium: 2rem;
+    --frame-outer-spacing-variant-large: 2.5rem;
+    --frame-outer-spacing-variant-extra-large: 3rem;
 }
 
 .frame {
@@ -44,9 +44,32 @@
         background-color: var(--frame-background);
         color: var(--frame-color);
     }
+
     &-subset_color_5 {
         background-color: var(--frame-background);
         color: var(--frame-color);
+    }
+}
+
+.frame-indent {
+    .content-row {
+        margin-left: 3%;
+        margin-right: 3%;
+
+        @include media-breakpoint-up(sm) {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        @include media-breakpoint-up(md) {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-left: 15%;
+            margin-right: 15%;
+        }
     }
 }
 
