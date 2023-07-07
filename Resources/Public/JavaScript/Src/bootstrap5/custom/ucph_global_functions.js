@@ -50,18 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
     /**
-     * Get height og global menu and set it on page spacer for styling purposes
-     */
-    const getGlobalMenuHeight = () => {
-        const pageHeader = document.querySelector('.header-navigation');
-        const pageHeaderSpacer = document.querySelector('.pageheader-spacer');
-        if (pageHeader && pageHeaderSpacer) {
-            pageHeaderSpacer.setAttribute('style', '--page-header-height: ' + (pageHeader.offsetHeight) + 'px');
-        }
-    }
-    getGlobalMenuHeight();
-
-    /**
      * Detect click on page search overlay
      */
     const searchOverlay = () => {
@@ -191,19 +179,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     runFooter();
-
-    document.addEventListener('resize', debounce(function () {
-        getGlobalMenuHeight();
-    }, 150));
-
-    document.addEventListener('orientationchange', debounce(function () {
-        getGlobalMenuHeight();
-    }, 150));
 });
 
 
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
+
+    /**
+     * Get height og global menu and set it on page spacer for styling purposes
+     */
+    const getGlobalMenuHeight = () => {
+        const pageHeader = document.querySelector('.header-navigation');
+        const pageHeaderSpacer = document.querySelector('.pageheader-spacer');
+        if (pageHeader && pageHeaderSpacer) {
+            pageHeaderSpacer.setAttribute('style', '--page-header-height: ' + (pageHeader.offsetHeight) + 'px');
+        }
+    }
+    getGlobalMenuHeight();
 
     /**
      * Animate page header
@@ -277,7 +269,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     // slideToOpenAccordion();
 
-    // Listen to "scroll to top" on scroll
     window.addEventListener('scroll', () => {
         animatePageHeader();
         animateMainmenu();
@@ -287,12 +278,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('resize', debounce(function () {
         //slideToOpenAccordion();
+        getGlobalMenuHeight();
         animatePageHeader();
         animateMainmenu();
     }, 150));
 
     window.addEventListener('orientationchange', debounce(function () {
         //slideToOpenAccordion();
+        getGlobalMenuHeight();
         animatePageHeader();
         animateMainmenu();
     }, 150));
