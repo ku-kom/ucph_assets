@@ -46,8 +46,8 @@ $frame-outer-spacing-scaling: map-merge(('none': 0,
     margin-bottom: var(--frame-outer-spacing-after);
     padding-top: var(--frame-spacing);
     padding-bottom: var(--frame-spacing);
-    padding-left: var(--bs-gutter-x);
-    padding-right: var(--bs-gutter-x);
+    padding-left: var(--frame-spacing);
+    padding-right: var(--frame-spacing);
     color: var(--frame-color);
     background: var(--frame-background);
 
@@ -68,6 +68,45 @@ $frame-outer-spacing-scaling: map-merge(('none': 0,
     @include cssVariables(subset_color_4);
     @include cssVariables(subset_color_5);
     @include cssVariables(subset_color_6);
+
+    &-none {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+//
+// Container
+// --------------------------------------------------
+.frame-container {
+    position: relative;
+    @include make-container();
+    &-default {
+        @each $breakpoint, $container-max-width in $container-max-widths {
+            @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+                max-width: $container-max-width;
+            }
+        }
+    }
+    &-full {
+        max-width: 100%;
+    }
+    &-large {
+        max-width: var(--frame-width-large);
+    }
+    &-medium {
+        max-width: var(--frame-width-medium);
+    }
+    &-small {
+        max-width: var(--frame-width-small);
+    }
+}
+.container {
+    .frame-container,
+    .frame-group-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 // Frame indent styles

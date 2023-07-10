@@ -1,0 +1,26 @@
+// Left-menu
+.nav-title-link {
+    @include font-size(1.2rem);
+    color: $body-color;
+    text-decoration: none;
+}
+
+.subnav-nav {
+    padding-left: 0;
+    list-style-type: none;
+
+    .active {
+        .subnav-link {
+            color: mix($black, $link-color, 30%);
+
+            &.current {
+                color: $body-color;
+            }
+        }
+    }
+
+
+    .subnav-nav {
+        margin-left: 1rem;
+    }
+}
