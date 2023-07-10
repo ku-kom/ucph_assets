@@ -17,3 +17,20 @@ body {
     }
 }
 
+.page-title {
+    padding: 0 0 1rem 0;
+}
+
+.page-heading {
+    margin: 0;
+}
+
+.main-content {
+    &> section {
+        &:first-of-type {
+            .frame-background-none {
+                padding-top: 0;
+            }
+        }
+    }
+}
