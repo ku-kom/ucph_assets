@@ -46,6 +46,8 @@ $frame-outer-spacing-scaling: map-merge(('none': 0,
     margin-bottom: var(--frame-outer-spacing-after);
     padding-top: var(--frame-spacing);
     padding-bottom: var(--frame-spacing);
+    padding-left: var(--bs-gutter-x);
+    padding-right: var(--bs-gutter-x);
     color: var(--frame-color);
     background: var(--frame-background);
 
