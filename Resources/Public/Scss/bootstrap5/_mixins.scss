@@ -1,15 +1,15 @@
 // Mixin for css color variables
-@mixin cssVariables($name) {
-    &-#{$name} {
-      background-color: var(--frame-background);
-        color: var(--frame-color);
+// @mixin cssVariables($name) {
+//     &-#{$name} {
+//       background-color: var(--crow-background);
+//         color: var(--crow-color);
 
-        a:not([class]) {
-            color: var(--frame-link-color);
+//         a:not([class]) {
+//             color: var(--crow-link-color);
 
-            &:hover {
-                color: var(--frame-link-hover-color);
-            }
-        }
-    }
-  }
+//             &:hover {
+//                 color: var(--crow-link-hover-color);
+//             }
+//         }
+//     }
+//   }

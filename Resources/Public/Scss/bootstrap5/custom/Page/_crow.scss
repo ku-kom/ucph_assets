@@ -1,0 +1,155 @@
+// cRow padding
+$crow-inner-spacing: 1.75rem !default;
+$crow-inner-spacing-small: .75rem !default;
+$crow-inner-spacing-scaling: () !default;
+$crow-inner-spacing-scaling: map-merge((xs: 1,
+        sm: 1.1,
+        md: 1.2,
+        lg: 1.3,
+        xl: 1.4),
+    $crow-inner-spacing-scaling);
+
+// cRow margin
+$crow-outer-spacing: 1rem !default;
+$crow-outer-spacing-scaling: () !default;
+$crow-outer-spacing-scaling: map-merge(('none': 0,
+        'extra-small': .8,
+        'small': 1,
+        'medium': 1.5,
+        'large': 2,
+        'extra-large': 3),
+    $crow-outer-spacing-scaling);
+
+:root {
+    --crow-color: var(--bs-body-color);
+    --crow-link-color: var(--bs-link-color-rgb);
+    --crow-link-hover-color: var(--bs-link-hover-color-rgb);
+    --crow-background: #{$white};
+    --crow-spacing: #{$crow-inner-spacing};
+
+    @each $breakpoint in map-keys($crow-inner-spacing-scaling) {
+        --crow-spacing-#{$breakpoint}: #{$crow-inner-spacing * map-get($crow-inner-spacing-scaling, $breakpoint)};
+        --crow-spacing-small-#{$breakpoint}: #{$crow-inner-spacing-small * map-get($crow-inner-spacing-scaling, $breakpoint)};
+    }
+
+    --crow-outer-spacing-before: 0;
+    --crow-outer-spacing-after: 0;
+
+    @each $variant in map-keys($crow-outer-spacing-scaling) {
+        --crow-outer-spacing-variant-#{$variant}: #{$crow-outer-spacing * map-get($crow-outer-spacing-scaling, $variant)};
+    }
+}
+
+// cType row definitions
+.crow {
+    position: relative;
+    margin-top: var(--crow-outer-spacing-before);
+    margin-bottom: var(--crow-outer-spacing-after);
+    padding-top: var(--crow-spacing);
+    padding-bottom: var(--crow-spacing);
+    padding-left: var(--crow-spacing);
+    padding-right: var(--crow-spacing);
+    color: var(--crow-color);
+    background: var(--crow-background);
+
+
+    @each $breakpoint in map-keys($crow-inner-spacing-scaling) {
+        @include media-breakpoint-up($breakpoint) {
+            --crow-spacing: var(--crow-spacing-#{$breakpoint});
+        }
+    }
+}
+
+// cRow background color.
+// Include mixin for each subcolor - pass classname as argument
+.crow-bg {
+    // @include cssVariables(subset_color_1);
+    // @include cssVariables(subset_color_2);
+    // @include cssVariables(subset_color_3);
+    // @include cssVariables(subset_color_4);
+    // @include cssVariables(subset_color_5);
+    // @include cssVariables(subset_color_6);
+
+    &-none {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+//
+// Container
+// --------------------------------------------------
+.crow-container {
+    position: relative;
+    @include make-container();
+    &-default {
+        @each $breakpoint, $container-max-width in $container-max-widths {
+            @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+                max-width: $container-max-width;
+            }
+        }
+    }
+    &-full {
+        max-width: 100%;
+    }
+    &-large {
+        max-width: var(--crow-width-large);
+    }
+    &-medium {
+        max-width: var(--crow-width-medium);
+    }
+    &-small {
+        max-width: var(--crow-width-small);
+    }
+}
+.container {
+    .crow-container,
+    .crow-group-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+// cRow indent styles
+.crow-indent {
+    .content-row {
+        margin-left: 3%;
+        margin-right: 3%;
+
+        @include media-breakpoint-up(sm) {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        @include media-breakpoint-up(md) {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+    }
+}
+
+// Space before and after
+@each $name,
+$scaling in $crow-outer-spacing-scaling {
+    .crow-space-before-#{$name} {
+        --crow-outer-spacing-before: var(--crow-outer-spacing-variant-#{$name});
+    }
+
+    .crow-space-after-#{$name} {
+        --crow-outer-spacing-after: var(--crow-outer-spacing-variant-#{$name});
+    }
+}
+.main-content {
+    &> section {
+        &:first-of-type {
+            .crow-bg-none {
+                padding-top: 0;
+            }
+        }
+    }
+}
