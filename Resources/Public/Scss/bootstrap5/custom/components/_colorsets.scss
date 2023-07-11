@@ -1,216 +1,231 @@
-// Each color set contains a list of subcolors:
+// Each color set contains a list of subcolors:#{$white-rgb};
 
 .color-set-1 {
     .subset_color_1 {
-        --crow-background: #20594f;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 32, 89, 79;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
 
     .subset_color_2 {
-        --crow-background: #487f76;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 72 127 118;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
 
     .subset_color_3 {
-        --crow-background: #e3260e;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 227, 38, 14;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
 
     .subset_color_4 {
-        --crow-background: #88bfb5;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 136, 191, 181;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
 
     .subset_color_5 {
-        --crow-background: #f7894b;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 247, 137, 75;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
     .subset_color_6 {
-        --crow-background: #f25922;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 242 89 34;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
 }
 
 .color-set-2 {
     .subset_color_1 {
-        --crow-background: #f90;
-        --crow-color: #{$black};
-        --crow-link-color: #{$black};
-        --crow-link-hover-color: #{$black};
+        --crow-background: 32, 89, 79;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
 
     .subset_color_2 {
-        --crow-background: #984e09;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 72 127 118;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
 
     .subset_color_3 {
-        --crow-background: #980917;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 227, 38, 14;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
 
     .subset_color_4 {
-        --crow-background: #0d6efd;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 136, 191, 181;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
 
     .subset_color_5 {
-        --crow-background: #1aca02;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 247, 137, 75;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
     .subset_color_6 {
-        --crow-background: #f25922;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 242 89 34;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
 }
 
 .color-set-3 {
     .subset_color_1 {
-        --crow-background: #f90;
-        --crow-color: #{$black};
-        --crow-link-color: #{$black};
-        --crow-link-hover-color: #{$black};
+        --crow-background: 32, 89, 79;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
 
     .subset_color_2 {
-        --crow-background: #984e09;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 72 127 118;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
 
     .subset_color_3 {
-        --crow-background: #980917;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 227, 38, 14;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
 
     .subset_color_4 {
-        --crow-background: #0d6efd;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 136, 191, 181;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
 
     .subset_color_5 {
-        --crow-background: #1aca02;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 247, 137, 75;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
     .subset_color_6 {
-        --crow-background: #f25922;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 242 89 34;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
 }
 
 .color-set-4 {
     .subset_color_1 {
-        --crow-background: #f90;
-        --crow-color: #{$black};
-        --crow-link-color: #{$black};
-        --crow-link-hover-color: #{$black};
+        --crow-background: 32, 89, 79;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
 
     .subset_color_2 {
-        --crow-background: #984e09;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 72 127 118;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
 
     .subset_color_3 {
-        --crow-background: #980917;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 227, 38, 14;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
 
     .subset_color_4 {
-        --crow-background: #0d6efd;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 136, 191, 181;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
 
     .subset_color_5 {
-        --crow-background: #1aca02;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 247, 137, 75;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
     .subset_color_6 {
-        --crow-background: #f25922;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 242 89 34;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
 }
 
 .color-set-5 {
     .subset_color_1 {
-        --crow-background: #f90;
-        --crow-color: #{$black};
-        --crow-link-color: #{$black};
-        --crow-link-hover-color: #{$black};
+        --crow-background: 32, 89, 79;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
 
     .subset_color_2 {
-        --crow-background: #984e09;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 72 127 118;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
 
     .subset_color_3 {
-        --crow-background: #980917;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 227, 38, 14;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
 
     .subset_color_4 {
-        --crow-background: #0d6efd;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 136, 191, 181;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
 
     .subset_color_5 {
-        --crow-background: #1aca02;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 247, 137, 75;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
     .subset_color_6 {
-        --crow-background: #f25922;
-        --crow-color: #{$white};
-        --crow-link-color: #{$white};
-        --crow-link-hover-color: #{$white};
+        --crow-background: 242 89 34;
+        --crow-color: #{$white-rgb};
+        --crow-link-color: #{$white-rgb};
+        --crow-link-hover-color: #{$white-rgb};
     }
+}
+
+// Global color included in all color sets. 
+.subset_color_7 {
+    --crow-background: #{$ku-red-rgb};
+    --crow-color: #{$white-rgb};
+    --crow-link-color: #{$white-rgb};
+    --crow-link-hover-color: #{$white-rgb};
+}
+
+.subset_color_8 {
+    --crow-background: #{$ku-grey-rgb};
+    --crow-color: #{$white-rgb};
+    --crow-link-color: #{$white-rgb};
+    --crow-link-hover-color: #{$white-rgb};
 }
