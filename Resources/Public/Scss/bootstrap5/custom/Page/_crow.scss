@@ -49,8 +49,8 @@ $crow-outer-spacing-scaling: map-merge(('none': 0,
     padding-bottom: var(--crow-spacing);
     padding-left: var(--crow-spacing);
     padding-right: var(--crow-spacing);
-    color: var(--crow-color);
-    background: var(--crow-background);
+    color: rgb(var(--crow-color));
+    background: rgb(var(--crow-background));
 
 
     @each $breakpoint in map-keys($crow-inner-spacing-scaling) {
@@ -61,16 +61,9 @@ $crow-outer-spacing-scaling: map-merge(('none': 0,
 }
 
 // cRow background color.
-// Include mixin for each subcolor - pass classname as argument
 .crow-bg {
-    // @include cssVariables(subset_color_1);
-    // @include cssVariables(subset_color_2);
-    // @include cssVariables(subset_color_3);
-    // @include cssVariables(subset_color_4);
-    // @include cssVariables(subset_color_5);
-    // @include cssVariables(subset_color_6);
-
     &-none {
+        // No padding if no background color
         padding-left: 0;
         padding-right: 0;
     }
