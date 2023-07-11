@@ -24,13 +24,3 @@ body {
 .page-heading {
     margin: 0;
 }
-
-.main-content {
-    &> section {
-        &:first-of-type {
-            .frame-background-none {
-                padding-top: 0;
-            }
-        }
-    }
-}
