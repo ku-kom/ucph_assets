@@ -2,23 +2,29 @@
 $crow-inner-spacing: 1.75rem !default;
 $crow-inner-spacing-small: .75rem !default;
 $crow-inner-spacing-scaling: () !default;
-$crow-inner-spacing-scaling: map-merge((xs: 1,
+$crow-inner-spacing-scaling: map-merge(
+    (
+        xs: 1,
         sm: 1.1,
         md: 1.2,
         lg: 1.3,
-        xl: 1.4),
-    $crow-inner-spacing-scaling);
+        xl: 1.4
+        ),
+    $crow-inner-spacing-scaling) !default;
 
 // cRow margin
 $crow-outer-spacing: 1rem !default;
 $crow-outer-spacing-scaling: () !default;
-$crow-outer-spacing-scaling: map-merge(('none': 0,
-        'extra-small': .8,
-        'small': 1,
-        'medium': 1.5,
-        'large': 2,
-        'extra-large': 3),
-    $crow-outer-spacing-scaling);
+$crow-outer-spacing-scaling: map-merge(
+        (
+        "none": 0,
+        "extra-small": .8,
+        "small": 1,
+        "medium": 1.5,
+        "large": 2,
+        "extra-large": 3
+        ),
+    $crow-outer-spacing-scaling) !default;
 
 :root {
     --crow-color: var(--bs-body-color);
@@ -138,7 +144,7 @@ $scaling in $crow-outer-spacing-scaling {
     }
 }
 .main-content {
-    &> section {
+    > section {
         &:first-of-type {
             .crow-bg-none {
                 padding-top: 0;
