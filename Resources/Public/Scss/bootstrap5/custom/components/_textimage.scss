@@ -65,27 +65,10 @@
         &.textpic-centered-right {
             flex-direction: row;
 
-            &>* {
-                flex: 1
+            >* {
+                flex: 1;
             }
         }
-    }
-
-    // Image besides text, top left
-    .textpic-centered-left {
-        .textpic-img {
-            margin: 0 1.5rem .5rem 0;
-        }
-    }
-
-    // Image besides text, top right
-    .textpic-centered-right {
-        .textpic-img {
-            margin: 0 0 .5rem 1.5rem;
-        }
-    }
-
-    .textpic {
 
         &.textpic-float-left,
         &.textpic-float-right {
@@ -109,6 +92,20 @@
     .textpic-float-right {
         .textpic-img {
             float: right;
+            margin: 0 0 .5rem 1.5rem;
+        }
+    }
+
+    // Image besides text, top left
+    .textpic-centered-left {
+        .textpic-img {
+            margin: 0 1.5rem .5rem 0;
+        }
+    }
+
+    // Image besides text, top right
+    .textpic-centered-right {
+        .textpic-img {
             margin: 0 0 .5rem 1.5rem;
         }
     }

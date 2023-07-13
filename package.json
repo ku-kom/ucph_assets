@@ -15,12 +15,12 @@
 		"js-concat": "globcat \"Resources/Public/JavaScript/Src/bootstrap5/custom/**/*.js\" --output \"Resources/Public/JavaScript/Dist/ucph-scripts.js\"",
 		"js-lint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives --ext .js, ",
 		"js-get-bootstrap": "copyfiles --flat \"./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js\" \"./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js.map\" \"Resources/Public/JavaScript/Dist\"",
-		"js-minify": "terser --compress passes=2 --mangle-props --format quote_style=1 --comments \"/^!/\" --output \"Resources/Public/JavaScript/Dist/ucph-scripts.min.js\" \"Resources/Public/JavaScript/Dist/ucph-scripts.js\" --source-map",
+		"js-minify": "terser-folder \"Resources/Public/JavaScript/Src/bootstrap5/custom/\" -e -x .min.js --mangle-props --format quote_style=1 --comments \"/^!/\" --config-file terser.json -o \"Resources/Public/JavaScript/Dist/\"",
 		"css": "npm-run-all css-compile css-prefix",
 		"watch-icons": "npm-run-all --parallel icon-copy",
 		"watch-bootstrap": "npm-run-all --parallel js-get-bootstrap",
-		"watch-js": "onchange \"Resources/Public/JavaScript/Src/bootstrap5/custom/*.js\" -- npm-run-all js-concat js-lint js-minify",
-		"watch-css": "onchange \"Resources/Public/Scss/bootstrap5/**/*.scss\" -- npm-run-all css-compile css-prefix",
+		"watch-js": "onchange \"Resources/Public/JavaScript/Src/bootstrap5/custom/*.js\" -- npm-run-all js-lint js-minify",
+		"watch-css": "onchange \"Resources/Public/Scss/bootstrap5/**/*.scss\" -- npm-run-all css-compile css-lint css-prefix",
 		"watch": "npm-run-all --parallel watch-*",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
@@ -47,7 +47,8 @@
 		"postcss-cli": "^10.1.0",
 		"sass": "^1.63.6",
 		"stylelint": "^15.9.1",
-		"stylelint-config-twbs-bootstrap": "^11.0.0",
-		"terser": "^5.18.2"
+		"stylelint-config-twbs-bootstrap": "^11.0.1",
+		"terser": "^5.19.0",
+		"terser-folder": "^2.0.0"
 	}
 }
