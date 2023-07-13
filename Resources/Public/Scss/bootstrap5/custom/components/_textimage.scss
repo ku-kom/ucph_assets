@@ -72,7 +72,7 @@
 
         &.textpic-float-left,
         &.textpic-float-right {
-            display: block;
+            display: unset;
 
             .textpic-img {
                 max-width: 50%;
