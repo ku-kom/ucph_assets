@@ -111,7 +111,6 @@ $crow-outer-spacing-scaling: map-merge(("none": 0,
 }
 
 .container {
-
     .crow-container,
     .crow-group-container {
         padding-left: 0;
@@ -121,7 +120,7 @@ $crow-outer-spacing-scaling: map-merge(("none": 0,
 
 // cRow indent styles
 .crow-indent {
-    .content-row {
+    .crow-container {
         margin-left: 3%;
         margin-right: 3%;
 
@@ -155,10 +154,13 @@ $scaling in $crow-outer-spacing-scaling {
 }
 
 .main-content {
+    // Remove padding around CType if it doesn't have a background color
     >section {
-        &:first-of-type {
-            .crow-bg-none {
-                padding-top: 0;
+        &:not([class*="subset-color-"]) {
+            &:first-of-type {
+                .crow-bg-none {
+                    padding-top: 0;
+                }
             }
         }
     }
