@@ -1,0 +1,19 @@
+// EXT:ucph_ce_socialmedia
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0;
+
+    li {
+        + li {
+            margin-left: 1rem;
+        }
+    }
+
+    a {
+        font-size: 2rem;
+        color: $gray-600;
+    }
+}
