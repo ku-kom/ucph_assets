@@ -71,15 +71,22 @@
     align-items: center;
 }
 
+// Language selector
+.lang {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
 // Global search form
 .main-search-area {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex-shrink: 1;
-    gap: .75rem;
 
     @include media-breakpoint-down(lg) {
+        gap: .75rem;
         padding-top: .3rem;
         padding-bottom: .3rem;
     }
