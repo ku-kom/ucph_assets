@@ -29,3 +29,14 @@
     min-height: 100%;
     object-fit: cover;
 }
+
+@include media-breakpoint-up(lg) {
+    .card-group {
+        gap: $grid-gutter-width;
+
+        >article {
+            flex: 0 0 calc(33.33333% - $grid-gutter-width);
+            margin-bottom: 0;
+        }
+    }
+}
