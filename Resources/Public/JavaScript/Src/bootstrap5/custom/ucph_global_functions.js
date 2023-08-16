@@ -70,19 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
     searchOverlay();
 
     /**
-     * Show/hide "scroll to top" if it exists
-     */
-    const scrollToTopIcon = () => {
-        const scrollToTop = document.getElementById('scrollToTop');
-        // multiple checks for browser compatibility:
-        let scollPosition = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollToTop) {
-            scrollToTop.classList.toggle('show', scollPosition > 60);
-        }
-    }
-    scrollToTopIcon();
-
-    /**
      * Remove focus from "scroll to top" element when clicked
      */
     document.getElementById('scrollToTop').addEventListener('click', (event) => {
@@ -233,11 +220,23 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     animateMainmenu();
 
-    
+    /**
+     * Show/hide "scroll to top" if it exists
+     */
+    const scrollToTopIcon = () => {
+        const scrollToTop = document.getElementById('scrollToTop');
+        // multiple checks for browser compatibility:
+        let scollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollToTop) {
+            scrollToTop.classList.toggle('show', scollPosition > 60);
+        }
+    }
+    scrollToTopIcon();
 
     window.addEventListener('scroll', () => {
         animatePageHeader();
         animateMainmenu();
+        scrollToTopIcon();
     }, {
         passive: true
     });
