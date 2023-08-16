@@ -8,4 +8,15 @@
     z-index: $zindex-fixed;
     @include font-size(2rem);
     cursor: pointer;
+
+    .bi {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: $scrolltotop-bg;
+        @include border-radius(50%);
+        width: 100%;
+        height: 100%;
+    }
 }
