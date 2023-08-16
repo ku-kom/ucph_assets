@@ -10,10 +10,16 @@ body {
 
 .main-section {
     flex: 1 0 auto;
+}
 
+.main-content {
     img {
         max-width: 100%;
         height: auto;
+    }
+
+    section {
+        @include clearfix;
     }
 }
 
