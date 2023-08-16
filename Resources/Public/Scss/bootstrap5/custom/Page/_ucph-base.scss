@@ -19,7 +19,7 @@ body {
     }
 
     section {
-        @include clearfix;
+        @include clearfix();
     }
 }
 
