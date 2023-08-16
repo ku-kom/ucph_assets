@@ -70,9 +70,20 @@ document.addEventListener('DOMContentLoaded', () => {
     searchOverlay();
 
     /**
+     * Scroll to top of page
+     */
+    const scrollToTop = () => {
+        window.scroll({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    /**
      * Remove focus from "scroll to top" element when clicked
      */
     document.getElementById('scrollToTop').addEventListener('click', (event) => {
+        scrollToTop();
         event.currentTarget.blur();
     });
 
