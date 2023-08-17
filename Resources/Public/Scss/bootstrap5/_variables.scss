@@ -3,6 +3,9 @@
 // Settings for the `<body>` element.
 $body-color:                    #252525 !default;
 $font-size-base:                1rem !default;
+$ku-font-family:                "Open Sans" !default;
+$font-family-sans-serif:        $ku-font-family, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif !default;
+
 
 // Color system
 //
