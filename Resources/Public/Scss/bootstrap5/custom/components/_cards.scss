@@ -1,5 +1,8 @@
 // EXT:ucph_ce_cardgroup
 
+// Variables
+$card-height: 100% !default;
+
 .card-link {
     display: block;
     color: inherit;
@@ -14,11 +17,13 @@
         outline: 0;
         box-shadow: $focus-ring-box-shadow;
         @include border-radius($card-border-radius);
+        @include border-bottom-radius(0);
     }
 }
 
 .card {
-    height: 100%;
+    height: $card-height;
+    @include border-bottom-radius(0);
 }
 
 .card-image {
