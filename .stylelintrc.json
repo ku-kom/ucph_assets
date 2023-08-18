@@ -37,7 +37,8 @@
         "stylistic/function-parentheses-newline-inside": null,
         "scss/selector-no-union-class-name": null,
         "order/properties-order": null,
-        "selector-no-qualifying-type": null
+        "selector-no-qualifying-type": null,
+        "selector-class-pattern": null
       }
     }
   ]
