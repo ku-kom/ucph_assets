@@ -9,9 +9,9 @@
 	"main": "index.js",
 	"scripts": {
 		"icon-copy": "copyfiles --flat \"./node_modules/bootstrap-icons/font/fonts/**/*\" \"Resources/Public/Fonts/bootstrap-icons\"",
-		"css-compile": "sass --style compressed --source-map --embed-sources --no-error-css \"Resources/Public/Scss/bootstrap5/bootstrap.scss\" \"Resources/Public/Css/Dist/bootstrap.min.css\"",
+		"css-compile": "sass --source-map --embed-sources --no-error-css \"Resources/Public/Scss/bootstrap5/bootstrap.scss\" \"Resources/Public/Css/Dist/bootstrap.css\"",
 		"css-lint": "stylelint \"Resources/Public/Scss/bootstrap5/\"",
-		"css-prefix": "postcss --config build/postcss.config.js --replace \"Resources/Public/Css/Dist/bootstrap.min.css\"",
+		"css-prefix": "postcss --config build/postcss.config.js --replace \"Resources/Public/Css/Dist/bootstrap.css\"",
 		"js-concat": "globcat \"Resources/Public/JavaScript/Src/bootstrap5/custom/**/*.js\" --output \"Resources/Public/JavaScript/Dist/ucph-scripts.js\"",
 		"js-lint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives --ext .js, ",
 		"js-get-bootstrap": "copyfiles --flat \"./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js\" \"./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js.map\" \"Resources/Public/JavaScript/Dist\"",
