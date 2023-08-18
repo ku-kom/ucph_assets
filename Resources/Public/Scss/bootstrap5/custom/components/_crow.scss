@@ -47,8 +47,8 @@ $crow-outer-spacing-scaling: map-merge(("none": 0,
     margin-bottom: var(--crow-outer-spacing-after);
     padding-left: 0;
     padding-right: 0;
-    padding-top: var(--crow-spacing);
-    padding-bottom: var(--crow-spacing);
+    padding-top: var(--crow-spacing, $grid-gutter-height);
+    padding-bottom: var(--crow-spacing, $grid-gutter-height);
 
     @each $breakpoint in map-keys($crow-inner-spacing-scaling) {
         @include media-breakpoint-up($breakpoint) {

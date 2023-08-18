@@ -15,6 +15,12 @@ $white-rgb:                     255, 255, 255 !default;
 $black-rgb:                     0, 0, 0 !default;
 $gray-f5:                       #f5f5f5 !default;
 
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-gutter-width:             2.5rem !default;
+$grid-gutter-height:            3rem !default;
 
 // Global elements
 //
