@@ -19890,6 +19890,12 @@ h6 strong, .h6 strong {
   color: inherit;
 }
 
+.header-divider {
+  margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #212529;
+}
+
 html,
 body {
   height: 100%;

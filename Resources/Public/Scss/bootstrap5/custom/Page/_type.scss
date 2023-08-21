@@ -23,3 +23,10 @@ $weight in $h-font-weights {
         color: inherit;
     }
 }
+
+// Deloverskrift
+.header-divider {
+    margin-bottom: 1rem;
+    padding-bottom: .8rem;
+    border-bottom: 1px solid $gray-900;
+}
