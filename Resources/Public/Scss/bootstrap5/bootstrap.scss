@@ -1,13 +1,19 @@
 // Import needed Bootstrap Files
 // DO NOT change the order of the imports
-@import "config";
+@import "../../../../node_modules/bootstrap/scss/functions";
+
+@import "variables";
+
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/variables-dark";
 
 // Bootstrap icons
 @import "../../../../node_modules/bootstrap-icons/font/bootstrap-icons";
 
-// Utilities
+// Utilities from node_modules
 @import "utilities";
-// Configuration
+
+// Components from node_modules
 @import "components";
 
 // Custom UCPH base styles
@@ -27,3 +33,6 @@
 @import "custom/components/tabs";
 @import "custom/extensions/socialmedia";
 @import "custom/extensions/stafflist";
+
+// Import scss from other extensions
+@import "../../../../../ucph_content_cardgroup/Resources/Public/Scss/cards";
