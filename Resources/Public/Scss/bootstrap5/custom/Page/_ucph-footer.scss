@@ -9,6 +9,11 @@
 }
 
 .footer-section-content {
+    summary {
+        display: block;
+        list-style-type: none;
+    }
+
     ul {
         list-style-type: none;
         padding: 0;
@@ -33,20 +38,23 @@
         }
     }
 
+    .footer-col-header {
+        padding: 1rem $grid-gutter-width;
+        border-bottom: 1px solid $white;
+        cursor: pointer;
+
+        &::before {
+            content: "\F64D"; // Plus (collapsed)
+            font-family: $bootstrap-icons-font;
+            -webkit-text-stroke: 1px;
+            float: right;
+        }
+    }
+
     .footer-section-content {
         ul {
             background-color: $white;
             color: $body-color;
-
-            &:not(.active) {
-                display: none;
-            }
-
-            &.active {
-                transition: height .4s cubic-bezier(.02, .01, .47, 1);
-                overflow: hidden;
-            }
-
         }
 
         li {
@@ -63,24 +71,14 @@
                 background-color: $gray-400;
             }
         }
-    }
 
-    .footer-col-header {
-        padding: 1rem $grid-gutter-width;
-        border-bottom: 1px solid $white;
-        cursor: pointer;
-
-        &::before {
-            content: "\F64D"; // Plus
-            font-family: $bootstrap-icons-font;
-            -webkit-text-stroke: 1px;
-            float: right;
-        }
-
-        &[aria-expanded="true"] {
-
-            &::before {
-                content: "\F63B"; // Minus
+        details {
+            &[open] {
+                .footer-col-header {
+                    &::before {
+                        content: "\F63B"; // Minus (expanded)
+                    }
+                }
             }
         }
     }
@@ -93,6 +91,10 @@
     }
 
     .footer-section-content {
+        summary {
+            pointer-events: none;
+        }
+
         ul {
             display: block;
         }
