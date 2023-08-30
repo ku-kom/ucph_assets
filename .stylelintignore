@@ -1,3 +1,8 @@
 **/*.min.css
 **/dist/
 node_modules
+# Ingore the following extensions:
+ucph_base_config/**/*.css
+ucph_content_sys_status/**/*.css
+ucph_content_slider/**/*.css
+ucph_page_scrollindicator/**/*.css
