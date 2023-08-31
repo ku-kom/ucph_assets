@@ -20429,6 +20429,9 @@ body {
   padding-left: var(--crow-spacing);
   padding-right: var(--crow-spacing);
 }
+.grid-row[class*=subset-color-] [data-container-identifier] {
+  padding-top: var(--crow-spacing, 2rem);
+}
 
 .crow-container {
   position: relative;
@@ -20484,30 +20487,7 @@ body {
   padding-right: 0;
 }
 
-.crow-indent .crow-container {
-  margin-left: 3%;
-  margin-right: 3%;
-}
-@media (min-width: 576px) {
-  .crow-indent .crow-container {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-}
-@media (min-width: 768px) {
-  .crow-indent .crow-container {
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-}
-@media (min-width: 992px) {
-  .crow-indent .crow-container {
-    margin-left: 15%;
-    margin-right: 15%;
-  }
-}
-
-.main-content > section:not([class*=subset-color-]):first-of-type .crow-bg-none {
+.main-content div:not([class*=subset-color-]):first-of-type .crow-bg-none {
   padding-top: 0;
 }
 
@@ -20661,6 +20641,8 @@ figure figcaption {
 }
 
 .main-content .card-img {
+  -o-object-fit: cover;
+  object-fit: cover;
   height: 100%;
   min-width: auto;
 }
