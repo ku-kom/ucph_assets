@@ -139,18 +139,6 @@ window.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
     /**
-     * Get height og global menu and set it on page spacer for styling purposes
-     */
-    const getGlobalMenuHeight = () => {
-        const pageHeader = document.querySelector('.header-navigation');
-        const pageHeaderSpacer = document.querySelector('.pageheader-spacer');
-        if (pageHeader && pageHeaderSpacer) {
-            pageHeaderSpacer.setAttribute('style', '--page-header-height: ' + (pageHeader.offsetHeight) + 'px');
-        }
-    }
-    getGlobalMenuHeight();
-
-    /**
      * Animate page header
      */
     const animatePageHeader = () => {
@@ -208,13 +196,11 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('resize', debounce(function () {
-        getGlobalMenuHeight();
         animatePageHeader();
         animateMainmenu();
     }, 150));
 
     window.addEventListener('orientationchange', debounce(function () {
-        getGlobalMenuHeight();
         animatePageHeader();
         animateMainmenu();
     }, 150));
