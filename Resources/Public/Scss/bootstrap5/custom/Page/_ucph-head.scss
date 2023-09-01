@@ -87,8 +87,7 @@
 
     @include media-breakpoint-down(lg) {
         gap: .75rem;
-        padding-top: .3rem;
-        padding-bottom: .3rem;
+        padding: .3rem 0;
     }
 }
 

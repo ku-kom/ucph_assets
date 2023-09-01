@@ -73,10 +73,16 @@ $crow-outer-spacing-scaling: map-merge(("none": 0,
     &[class*="subset-color-"] {
         padding-left: var(--crow-spacing);
         padding-right: var(--crow-spacing);
+
         // Add padding when grid rows have a background color
         [data-container-identifier] {
             padding-top: var(--crow-spacing, 2rem);
         }
+    }
+
+    >.container {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -115,6 +121,7 @@ $crow-outer-spacing-scaling: map-merge(("none": 0,
 }
 
 .container {
+
     .crow-container,
     .crow-group-container {
         padding-left: 0;
@@ -158,6 +165,7 @@ $crow-outer-spacing-scaling: map-merge(("none": 0,
 // }
 
 .main-content {
+
     // Remove padding around CType if it doesn't have a background color
     div {
         &:not([class*="subset-color-"]) {
@@ -166,6 +174,12 @@ $crow-outer-spacing-scaling: map-merge(("none": 0,
                     padding-top: 0;
                 }
             }
+        }
+    }
+
+    >section {
+        +section {
+            margin-top: $grid-gutter-height;
         }
     }
 }
