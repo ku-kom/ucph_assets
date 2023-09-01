@@ -20008,8 +20008,7 @@ body {
 @media (max-width: 991.98px) {
   .main-search-area {
     gap: 0.75rem;
-    padding-top: 0.3rem;
-    padding-bottom: 0.3rem;
+    padding: 0.3rem 0;
   }
 }
 
