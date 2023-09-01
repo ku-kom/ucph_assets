@@ -45,44 +45,16 @@ $crow-outer-spacing-scaling: map-merge(("none": 0,
     position: relative;
     margin-top: var(--crow-outer-spacing-before);
     margin-bottom: var(--crow-outer-spacing-after);
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: var(--crow-spacing, $grid-gutter-height);
-    padding-bottom: var(--crow-spacing, $grid-gutter-height);
+    padding: 0;
+    // padding-left: 0;
+    // padding-right: 0;
+    // padding-top: var(--crow-spacing, $grid-gutter-height);
+    // padding-bottom: var(--crow-spacing, $grid-gutter-height);
 
     @each $breakpoint in map-keys($crow-inner-spacing-scaling) {
         @include media-breakpoint-up($breakpoint) {
             --crow-spacing: var(--crow-spacing-#{$breakpoint});
         }
-    }
-}
-
-// EXT:container rows background color
-.grid-row {
-    color: rgb(var(--crow-color));
-    background: rgb(var(--crow-background));
-
-    a {
-        color: rgb(var(--crow-link-color));
-
-        &:hover {
-            color: rgb(var(--crow-link-hover-color));
-        }
-    }
-
-    &[class*="subset-color-"] {
-        padding-left: var(--crow-spacing);
-        padding-right: var(--crow-spacing);
-
-        // Add padding when grid rows have a background color
-        [data-container-identifier] {
-            padding-top: var(--crow-spacing, 2rem);
-        }
-    }
-
-    >.container {
-        padding-left: 0;
-        padding-right: 0;
     }
 }
 
@@ -164,22 +136,60 @@ $crow-outer-spacing-scaling: map-merge(("none": 0,
 //     }
 // }
 
-.main-content {
 
-    // Remove padding around CType if it doesn't have a background color
-    div {
-        &:not([class*="subset-color-"]) {
-            &:first-of-type {
-                .crow-bg-none {
+// EXT:container rows background color
+.grid-row {
+    color: rgb(var(--crow-color));
+    background: rgb(var(--crow-background));
+
+    a {
+        color: rgb(var(--crow-link-color));
+
+        &:hover {
+            color: rgb(var(--crow-link-hover-color));
+        }
+    }
+
+    &[class*="subset-color-"] {
+        padding-left: var(--crow-spacing);
+        padding-right: var(--crow-spacing);
+
+        // Add padding when grid rows have a background color
+        [data-container-identifier] {
+            padding-top: var(--crow-spacing, 2rem);
+
+            // Each content element inside a container grid
+            section {
+                .crow {
                     padding-top: 0;
+                    padding-bottom: 0;
                 }
             }
         }
     }
 
+    &:not([class*="subset-color-"]) {
+        &:first-of-type {
+            .crow-bg-none {
+                padding-top: 0;
+            }
+        }
+    }
+
+    >.container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+//
+// Adjustments when a background color is added to a row
+// ------------------------------------------------------
+.main-content {
+
     >section {
         +section {
-            margin-top: $grid-gutter-height;
+            @include rfs($grid-gutter-height, margin-top);
         }
     }
 }
