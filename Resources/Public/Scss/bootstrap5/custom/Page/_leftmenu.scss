@@ -2,6 +2,7 @@
 .nav-title-link {
     @include font-size(1.2rem);
     color: $body-color;
+    display: block;
     text-decoration: none;
 }
 
@@ -18,7 +19,6 @@
             }
         }
     }
-
 
     .subnav-nav {
         margin-left: 1rem;

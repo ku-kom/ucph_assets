@@ -1,3 +1,5 @@
+$pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height} + 1rem) !default;
+
 .skippy {
     flex: none;
     opacity: 0;
@@ -13,6 +15,20 @@
         left: 0;
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+.site-logo {
+    transition: all 350ms cubic-bezier(.445, .05, .55, .95);
+}
+
+.top-section {
+    &.is-small {
+
+        // When scrolling down
+        .logo-xl {
+            display: none;
+        }
     }
 }
 
@@ -47,22 +63,9 @@
     }
 }
 
-.global-nav {
-    @include media-breakpoint-down(lg) {
-        .navbar {
-            justify-content: flex-end;
-        }
-
-        .offcanvas {
-            --#{$prefix}offcanvas-width: 80%;
-        }
-    }
-}
-
 // Push down content below sticky page header
 .pageheader-spacer {
-    min-height: 9rem;
-    // margin-top: 1rem;
+    min-height: calc(#{$global-menu-height} + 1rem);
 }
 
 // Logo area
@@ -111,6 +114,30 @@
 }
 
 @include media-breakpoint-down(lg) {
+    .global-topbar {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .global-nav {
+        .navbar {
+            justify-content: flex-end;
+        }
+
+        .offcanvas {
+            --#{$prefix}offcanvas-width: 80%;
+        }
+    }
+
+    .logo-area {
+        padding-left: 0;
+    }
+
+    .main-search-area {
+        gap: .75rem;
+        padding: .3rem 0;
+    }
+
     .global-search {
         position: absolute;
         top: 0;
@@ -133,6 +160,30 @@
 }
 
 @include media-breakpoint-up(lg) {
+
+    // Push down content below sticky page header
+    .pageheader-spacer {
+        min-height: $pageheader-spacer-height;
+    }
+
+    .top-section {
+        .global-topbar {
+            transition: all $global-menu-transition-duration $global-menu-transition;
+            height: $global-topbar-height;
+        }
+
+        &.is-small {
+            // Height when scrolled
+            .global-topbar {
+                height: 70px;
+            }
+        }
+    }
+
+    .global-menu {
+        height: $global-menu-height;
+    }
+
     .global-nav {
         background-color: $global-menu-bg;
         box-shadow: 0 2px 10px rgba($black, .15);
