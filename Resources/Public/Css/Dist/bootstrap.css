@@ -20430,6 +20430,10 @@ body {
 .grid-row[class*=subset-color-] [data-container-identifier] {
   padding-top: var(--crow-spacing, 2rem);
 }
+.grid-row > .container {
+  padding-left: 0;
+  padding-right: 0;
+}
 
 .crow-container {
   position: relative;
@@ -20487,6 +20491,9 @@ body {
 
 .main-content div:not([class*=subset-color-]):first-of-type .crow-bg-none {
   padding-top: 0;
+}
+.main-content > section + section {
+  margin-top: 3rem;
 }
 
 .audio-list-item + .audio-list-item {
