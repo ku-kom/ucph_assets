@@ -2,7 +2,7 @@
 $crow-inner-spacing: 1.75rem !default;
 $crow-inner-spacing-small: .75rem !default;
 $crow-inner-spacing-scaling: () !default;
-$crow-inner-spacing-scaling: map-merge((xs: 1,
+$crow-inner-spacing-scaling: map-merge((xs: .8,
         sm: 1,
         md: 1.2,
         lg: 1.4,
@@ -45,11 +45,10 @@ $crow-outer-spacing-scaling: map-merge(("none": 0,
     position: relative;
     margin-top: var(--crow-outer-spacing-before);
     margin-bottom: var(--crow-outer-spacing-after);
-    padding: 0;
     // padding-left: 0;
     // padding-right: 0;
-    // padding-top: var(--crow-spacing, $grid-gutter-height);
-    // padding-bottom: var(--crow-spacing, $grid-gutter-height);
+    padding-top: var(--crow-spacing, $grid-gutter-height);
+    padding-bottom: var(--crow-spacing, $grid-gutter-height);
 
     @each $breakpoint in map-keys($crow-inner-spacing-scaling) {
         @include media-breakpoint-up($breakpoint) {
@@ -153,43 +152,31 @@ $crow-outer-spacing-scaling: map-merge(("none": 0,
     &[class*="subset-color-"] {
         padding-left: var(--crow-spacing);
         padding-right: var(--crow-spacing);
+    }
+}
 
-        // Add padding when grid rows have a background color
-        [data-container-identifier] {
-            padding-top: var(--crow-spacing, 2rem);
+section {
+    >.grid-row {
+        >.container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
 
-            // Each content element inside a container grid
-            section {
-                .crow {
+    [data-container-identifier] {
+        section {
+            margin-top: 0;
+             // Not first
+            &:nth-child(n+2) {
+
+                .crow-bg-none {
                     padding-top: 0;
-                    padding-bottom: 0;
                 }
             }
         }
     }
 
-    &:not([class*="subset-color-"]) {
-        &:first-of-type {
-            .crow-bg-none {
-                padding-top: 0;
-            }
-        }
-    }
-
-    >.container {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
-//
-// Adjustments when a background color is added to a row
-// ------------------------------------------------------
-.main-content {
-
-    >section {
-        +section {
-            @include rfs($grid-gutter-height, margin-top);
-        }
+    +section {
+        @include rfs($grid-gutter-height, margin-top);
     }
 }

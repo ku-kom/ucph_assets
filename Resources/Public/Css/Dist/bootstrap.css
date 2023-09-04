@@ -20463,7 +20463,8 @@ body {
   position: relative;
   margin-top: var(--crow-outer-spacing-before);
   margin-bottom: var(--crow-outer-spacing-after);
-  padding: 0;
+  padding-top: var(--crow-spacing, 3rem);
+  padding-bottom: var(--crow-spacing, 3rem);
 }
 
 .crow-container {
@@ -20534,26 +20535,22 @@ body {
   padding-left: var(--crow-spacing);
   padding-right: var(--crow-spacing);
 }
-.grid-row[class*=subset-color-] [data-container-identifier] {
-  padding-top: var(--crow-spacing, 2rem);
-}
-.grid-row[class*=subset-color-] [data-container-identifier] section .crow {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-.grid-row:not([class*=subset-color-]):first-of-type .crow-bg-none {
-  padding-top: 0;
-}
-.grid-row > .container {
+
+section > .grid-row > .container {
   padding-left: 0;
   padding-right: 0;
 }
-
-.main-content > section + section {
+section [data-container-identifier] section {
+  margin-top: 0;
+}
+section [data-container-identifier] section:nth-child(n+2) .crow-bg-none {
+  padding-top: 0;
+}
+section + section {
   margin-top: calc(1.425rem + 2.1vw);
 }
 @media (min-width: 1200px) {
-  .main-content > section + section {
+  section + section {
     margin-top: 3rem;
   }
 }
