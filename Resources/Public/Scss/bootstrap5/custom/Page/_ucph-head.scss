@@ -114,10 +114,18 @@ $pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height
     padding-left: 0;
 }
 
+.logo-md {
+    display: none;
+}
+
 @include media-breakpoint-down(lg) {
     .global-topbar {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .logo-xl {
+        display: none;
     }
 
     .global-nav {
@@ -128,10 +136,6 @@ $pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height
         .offcanvas {
             --#{$prefix}offcanvas-width: 80%;
         }
-    }
-
-    .logo-area {
-        padding-left: 0;
     }
 
     .main-search-area {
@@ -160,7 +164,26 @@ $pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height
     }
 }
 
+@include media-breakpoint-between(sm, lg) {
+    .logo-sm {
+        display: none;
+    }
+
+    .logo-md {
+        display: block;
+    }
+
+    .logo-lg {
+        display: none;
+    }
+}
+
 @include media-breakpoint-up(lg) {
+
+    .logo-sm,
+    .logo-md {
+        display: none;
+    }
 
     // Push down content below sticky page header
     .pageheader-spacer {
@@ -178,6 +201,10 @@ $pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height
             // Height when scrolled
             .global-topbar {
                 height: 70px;
+            }
+
+            .logo-sm {
+                display: block;
             }
         }
     }
@@ -197,6 +224,16 @@ $pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height
         transition: all $global-menu-transition-duration $global-menu-transition;
         width: 100%;
         z-index: $zindex-sticky - 40;
+    }
+
+    .globalmenu {
+        .nav-item {
+            &:first-of-type {
+                .nav-link {
+                    padding-left: 0;
+                }
+            }
+        }
     }
 
     .btn-searchoverlay-open,

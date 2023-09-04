@@ -20031,19 +20031,23 @@ body {
   padding-left: 0;
 }
 
+.logo-md {
+  display: none;
+}
+
 @media (max-width: 991.98px) {
   .global-topbar {
     padding-left: 0;
     padding-right: 0;
+  }
+  .logo-xl {
+    display: none;
   }
   .global-nav .navbar {
     justify-content: flex-end;
   }
   .global-nav .offcanvas {
     --bs-offcanvas-width: 80%;
-  }
-  .logo-area {
-    padding-left: 0;
   }
   .main-search-area {
     gap: 0.75rem;
@@ -20068,7 +20072,22 @@ body {
     transform: translateY(0);
   }
 }
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .logo-sm {
+    display: none;
+  }
+  .logo-md {
+    display: block;
+  }
+  .logo-lg {
+    display: none;
+  }
+}
 @media (min-width: 992px) {
+  .logo-sm,
+  .logo-md {
+    display: none;
+  }
   .pageheader-spacer {
     min-height: calc(102px + 62px + 1rem);
   }
@@ -20078,6 +20097,9 @@ body {
   }
   .top-section.is-small .global-topbar {
     height: 70px;
+  }
+  .top-section.is-small .logo-sm {
+    display: block;
   }
   .global-menu {
     height: 62px;
@@ -20093,6 +20115,9 @@ body {
     transition: all 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     width: 100%;
     z-index: 980;
+  }
+  .globalmenu .nav-item:first-of-type .nav-link {
+    padding-left: 0;
   }
   .btn-searchoverlay-open,
   .btn-searchoverlay-close,
@@ -20704,6 +20729,7 @@ figure figcaption {
 @media (min-width: 992px) {
   .img-overlay h2, .img-overlay .h2 {
     font-size: 2.25rem;
+    line-height: 3.1rem;
   }
   .img-overlay h2 > span, .img-overlay .h2 > span {
     padding: 0 10px 4px 10px;
@@ -20725,6 +20751,7 @@ figure figcaption {
     bottom: 0;
     left: 0;
     padding: 2rem;
+    max-width: 75%;
   }
 }
 
