@@ -41,7 +41,8 @@ $pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height
 
 .global-topbar {
     position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
     z-index: $zindex-sticky - 20;
     background-color: $white;
     box-shadow: 0 0 10px rgba($black, .15);
@@ -173,6 +174,7 @@ $pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height
         }
 
         &.is-small {
+
             // Height when scrolled
             .global-topbar {
                 height: 70px;
