@@ -19962,7 +19962,8 @@ body {
 
 .global-topbar {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
   z-index: 1000;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
@@ -20711,6 +20712,11 @@ figure figcaption {
     box-shadow: 10px 0 0 0 #fff, -10px 0 0 0 #fff;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
+  }
+  .img-overlay h2 > span p, .img-overlay .h2 > span p {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    line-height: inherit;
   }
   .img-overlay .img-overlay-text {
     position: absolute;
