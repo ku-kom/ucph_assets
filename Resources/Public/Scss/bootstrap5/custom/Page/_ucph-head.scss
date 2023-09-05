@@ -19,7 +19,19 @@ $pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height
 }
 
 .site-logo {
-    transition: all 350ms cubic-bezier(.445, .05, .55, .95);
+    animation: fade-in .9s;
+}
+
+@if $enable-transitions {
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
 }
 
 .top-section {
