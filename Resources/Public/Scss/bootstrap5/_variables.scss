@@ -58,11 +58,21 @@ $scrolltotop-bg:                #a1a1a1 !default;
 $enable-dark-mode:               false !default;
 
 // Icons
+//
 $bootstrap-icons-font: "bootstrap-icons" !default;
 // Import Bootstrap Icons w/ custom path to fonts folder
 $bootstrap-icons-font-dir: "../../Fonts/bootstrap-icons" !default;
 
+// Typography
+//
 $blockquote-font-size:        $font-size-base * 1.3 !default;
 $blockquote-footer-font-size: $font-size-base * 1.1 !default;
 
+// Accessibility
+//
 $focus-ring-width:      .15rem !default;
+
+// Cards
+//
+$card-height: 24rem !default;
+$card-inner-border-radius: 0 !default;
