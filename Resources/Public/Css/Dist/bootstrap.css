@@ -19946,7 +19946,7 @@ body {
 }
 
 .site-logo {
-  animation: fade-in 0.9s;
+  animation: fade-in 0.8s;
 }
 
 @keyframes fade-in {
@@ -20081,13 +20081,17 @@ body {
   }
 }
 @media (min-width: 576px) and (max-width: 991.98px) {
-  .logo-sm {
+  .logo-sm,
+  .logo-lg {
     display: none;
   }
   .logo-md {
     display: block;
   }
-  .logo-lg {
+  .top-section.is-small .logo-sm {
+    display: block;
+  }
+  .top-section.is-small .logo-md {
     display: none;
   }
 }
@@ -20573,12 +20577,26 @@ body {
   }
 }
 
+[data-container] {
+  position: relative;
+}
+
 section > .grid-row:not([class*=subset-color-]) > .container {
   padding-left: 0;
   padding-right: 0;
 }
 section [data-container] section:nth-child(n+2) > .crow-bg-none {
   padding-top: 0;
+}
+
+.crow-bg-mg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
 }
 
 .audio-list-item + .audio-list-item {
