@@ -19993,7 +19993,7 @@ body {
 }
 
 .pageheader-spacer {
-  min-height: calc(62px + 1rem);
+  min-height: calc(62px + 1.5rem);
 }
 
 .logo-area {
@@ -20097,7 +20097,7 @@ body {
     display: none;
   }
   .pageheader-spacer {
-    min-height: calc(102px + 62px + 1rem);
+    min-height: calc(102px + 62px + 1.5rem);
   }
   .top-section .global-topbar {
     transition: all 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
@@ -20144,6 +20144,9 @@ body {
 
 .footer-col-header {
   font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
   margin: 0;
 }
 
@@ -20158,6 +20161,10 @@ body {
 }
 .footer-section-content a {
   display: block;
+  text-decoration: none;
+}
+.footer-section-content a:hover, .footer-section-content a:focus {
+  text-decoration: underline;
 }
 .footer-section-content a:-webkit-any-link {
   color: inherit;
@@ -20177,7 +20184,8 @@ body {
     --bs-gutter-x: 0;
   }
   .footer-col-header {
-    padding: 1rem 2.9rem;
+    font-size: calc(1.255rem + 0.06vw);
+    padding: 1rem 1.5rem;
     border-bottom: 1px solid #fff;
     cursor: pointer;
   }
@@ -20211,6 +20219,7 @@ body {
   }
   .footer-section-content summary {
     pointer-events: none;
+    margin-bottom: 0.5rem;
   }
   .footer-section-content ul {
     display: block;
@@ -20468,7 +20477,7 @@ body {
   --crow-spacing-md: 1.3rem;
   --crow-spacing-lg: 1.5rem;
   --crow-spacing-xl: 2rem;
-  --crow-spacing-xxl: 2.5rem;
+  --crow-spacing-xxl: 2rem;
   --crow-outer-spacing-before: 0;
   --crow-outer-spacing-after: 0;
 }
@@ -20557,9 +20566,11 @@ body {
 .grid-row a:hover {
   color: rgb(var(--crow-link-hover-color));
 }
-.grid-row[class*=subset-color-] {
-  padding-left: var(--crow-spacing);
-  padding-right: var(--crow-spacing);
+@media (min-width: 992px) {
+  .grid-row[class*=subset-color-] {
+    padding-left: var(--crow-spacing);
+    padding-right: var(--crow-spacing);
+  }
 }
 
 section > .grid-row:not([class*=subset-color-]) > .container {
@@ -20732,6 +20743,7 @@ figure figcaption {
 
 .img-overlay {
   position: relative;
+  margin-bottom: 0;
 }
 .img-overlay picture {
   display: block;

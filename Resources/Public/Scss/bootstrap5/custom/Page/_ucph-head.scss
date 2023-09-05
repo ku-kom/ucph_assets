@@ -1,4 +1,4 @@
-$pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height} + 1rem) !default;
+$pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height} + 1.5rem) !default;
 
 .skippy {
     flex: none;
@@ -78,7 +78,7 @@ $pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height
 
 // Push down content below sticky page header
 .pageheader-spacer {
-    min-height: calc(#{$global-menu-height} + 1rem);
+    min-height: calc(#{$global-menu-height} + 1.5rem);
 }
 
 // Logo area
