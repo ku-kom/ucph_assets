@@ -30,6 +30,12 @@ $crow-padding-scaling: (xs: 1,
     // padding-right: 0;
     padding-top: var(--crow-spacing, $grid-gutter-height);
     padding-bottom: var(--crow-spacing, $grid-gutter-height);
+
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        @include media-breakpoint-up($breakpoint) {
+            --crow-spacing: var(--crow-spacing-#{$breakpoint});
+        }
+    }
 }
 
 //
@@ -104,12 +110,12 @@ section {
     // }
 }
 
-.main-content {
-    >section {
-        &:first-of-type {
-            .crow-bg-none {
-                padding-top: 0;
-            }
-        }
-    }
-}
+// .main-content {
+//     >section {
+//         &:first-of-type {
+//             .crow-bg-none {
+//                 padding-top: 0;
+//             }
+//         }
+//     }
+// }
