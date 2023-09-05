@@ -20577,10 +20577,6 @@ body {
   }
 }
 
-[data-container] {
-  position: relative;
-}
-
 section > .grid-row:not([class*=subset-color-]) > .container {
   padding-left: 0;
   padding-right: 0;
