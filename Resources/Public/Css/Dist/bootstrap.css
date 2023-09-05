@@ -20454,17 +20454,47 @@ body {
   --crow-link-color: var(--bs-link-color-rgb);
   --crow-link-hover-color: var(--bs-link-hover-color-rgb);
   --crow-background: #fff;
-  --crow-spacing: 1.75rem;
+  --crow-spacing: 1rem;
+  --crow-spacing-xs: 1rem;
+  --crow-spacing-sm: 1.1rem;
+  --crow-spacing-md: 1.3rem;
+  --crow-spacing-lg: 1.5rem;
+  --crow-spacing-xl: 2rem;
+  --crow-spacing-xxl: 2.5rem;
   --crow-outer-spacing-before: 0;
   --crow-outer-spacing-after: 0;
 }
 
 .crow {
   position: relative;
-  margin-top: var(--crow-outer-spacing-before);
-  margin-bottom: var(--crow-outer-spacing-after);
   padding-top: var(--crow-spacing, 3rem);
   padding-bottom: var(--crow-spacing, 3rem);
+  --crow-spacing: var(--crow-spacing-xs);
+}
+@media (min-width: 576px) {
+  .crow {
+    --crow-spacing: var(--crow-spacing-sm);
+  }
+}
+@media (min-width: 768px) {
+  .crow {
+    --crow-spacing: var(--crow-spacing-md);
+  }
+}
+@media (min-width: 992px) {
+  .crow {
+    --crow-spacing: var(--crow-spacing-lg);
+  }
+}
+@media (min-width: 1200px) {
+  .crow {
+    --crow-spacing: var(--crow-spacing-xl);
+  }
+}
+@media (min-width: 1400px) {
+  .crow {
+    --crow-spacing: var(--crow-spacing-xxl);
+  }
 }
 
 .crow-container {
@@ -20502,18 +20532,6 @@ body {
     max-width: 1320px;
   }
 }
-.crow-container-full {
-  max-width: 100%;
-}
-.crow-container-large {
-  max-width: var(--crow-width-large);
-}
-.crow-container-medium {
-  max-width: var(--crow-width-medium);
-}
-.crow-container-small {
-  max-width: var(--crow-width-small);
-}
 
 .container .crow-container,
 .container .crow-group-container {
@@ -20536,23 +20554,12 @@ body {
   padding-right: var(--crow-spacing);
 }
 
-section > .grid-row > .container {
+section > .grid-row:not([class*=subset-color-]) > .container {
   padding-left: 0;
   padding-right: 0;
 }
-section [data-container-identifier] section {
-  margin-top: 0;
-}
-section [data-container-identifier] section:nth-child(n+2) .crow-bg-none {
+section [data-container] section:nth-child(n+2) > .crow-bg-none {
   padding-top: 0;
-}
-section + section {
-  margin-top: calc(1.425rem + 2.1vw);
-}
-@media (min-width: 1200px) {
-  section + section {
-    margin-top: 3rem;
-  }
 }
 
 .audio-list-item + .audio-list-item {
