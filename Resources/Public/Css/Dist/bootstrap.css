@@ -20554,11 +20554,11 @@ body {
   padding-right: var(--crow-spacing);
 }
 
-section > .grid-row > .container {
+section > .grid-row:not([class*=subset-color-]) > .container {
   padding-left: 0;
   padding-right: 0;
 }
-section [data-container-identifier] section:nth-child(n+2) > .crow-bg-none {
+section [data-container] section:nth-child(n+2) > .crow-bg-none {
   padding-top: 0;
 }
 

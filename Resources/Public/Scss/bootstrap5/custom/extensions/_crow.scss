@@ -86,13 +86,15 @@ $crow-padding-scaling: (xs: 1,
 
 section {
     >.grid-row {
-        >.container {
-            padding-left: 0;
-            padding-right: 0;
+        &:not([class*="subset-color-"]) {
+            >.container {
+                padding-left: 0;
+                padding-right: 0;
+            }
         }
     }
 
-    [data-container-identifier] {
+    [data-container] {
         section {
 
             // Not first
@@ -104,18 +106,4 @@ section {
             }
         }
     }
-
-    // +section {
-    //     @include rfs($grid-gutter-height, margin-top);
-    // }
 }
-
-// .main-content {
-//     >section {
-//         &:first-of-type {
-//             .crow-bg-none {
-//                 padding-top: 0;
-//             }
-//         }
-//     }
-// }
