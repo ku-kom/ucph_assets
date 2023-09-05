@@ -1,12 +1,12 @@
 // cRow padding
 $crow-inner-spacing: 1.75rem !default;
-$crow-inner-spacing-small: .75rem !default;
 $crow-inner-spacing-scaling: () !default;
 $crow-inner-spacing-scaling: map-merge((xs: .8,
         sm: 1,
         md: 1.2,
         lg: 1.4,
-        xl: 1.5),
+        xl: 1.5,
+        xxl: 1.5),
     $crow-inner-spacing-scaling) !default;
 
 // cRow margin
@@ -29,14 +29,6 @@ $crow-outer-spacing-scaling: map-merge(("none": 0,
 
     @each $breakpoint in map-keys($crow-inner-spacing-scaling) {
         --crow-spacing-#{$breakpoint}: #{$crow-inner-spacing * map-get($crow-inner-spacing-scaling, $breakpoint)};
-        --crow-spacing-small-#{$breakpoint}: #{$crow-inner-spacing-small * map-get($crow-inner-spacing-scaling, $breakpoint)};
-    }
-
-    --crow-outer-spacing-before: 0;
-    --crow-outer-spacing-after: 0;
-
-    @each $variant in map-keys($crow-outer-spacing-scaling) {
-        --crow-outer-spacing-variant-#{$variant}: #{$crow-outer-spacing * map-get($crow-outer-spacing-scaling, $variant)};
     }
 }
 
@@ -50,11 +42,11 @@ $crow-outer-spacing-scaling: map-merge(("none": 0,
     padding-top: var(--crow-spacing, $grid-gutter-height);
     padding-bottom: var(--crow-spacing, $grid-gutter-height);
 
-    @each $breakpoint in map-keys($crow-inner-spacing-scaling) {
-        @include media-breakpoint-up($breakpoint) {
-            --crow-spacing: var(--crow-spacing-#{$breakpoint});
-        }
-    }
+    // @each $breakpoint in map-keys($grid-breakpoints) {
+    //     @include media-breakpoint-up($breakpoint) {
+    //         --crow-spacing: var(--crow-spacing-#{$breakpoint});
+    //     }
+    // }
 }
 
 //

@@ -20455,8 +20455,6 @@ body {
   --crow-link-hover-color: var(--bs-link-hover-color-rgb);
   --crow-background: #fff;
   --crow-spacing: 1.75rem;
-  --crow-outer-spacing-before: 0;
-  --crow-outer-spacing-after: 0;
 }
 
 .crow {
