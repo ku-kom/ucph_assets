@@ -86,6 +86,7 @@ $crow-padding-scaling: (xs: 1,
 
 section {
     >.grid-row {
+        // Without background
         &:not([class*="subset-color-"]) {
             >.container {
                 padding-left: 0;

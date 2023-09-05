@@ -17368,12 +17368,12 @@ textarea.form-control-lg {
   --bs-card-border-color: var(--bs-border-color-translucent);
   --bs-card-border-radius: var(--bs-border-radius);
   --bs-card-box-shadow: ;
-  --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+  --bs-card-inner-border-radius: 0;
   --bs-card-cap-padding-y: 0.5rem;
   --bs-card-cap-padding-x: 1rem;
   --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
   --bs-card-cap-color: ;
-  --bs-card-height: ;
+  --bs-card-height: 24rem;
   --bs-card-color: ;
   --bs-card-bg: var(--bs-body-bg);
   --bs-card-img-overlay-padding: 1rem;
@@ -20709,7 +20709,7 @@ figure figcaption {
 }
 
 .card {
-  height: 22rem;
+  height: 24rem;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
