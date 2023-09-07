@@ -101,11 +101,6 @@ $pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height
     justify-content: flex-end;
     align-items: center;
     flex-shrink: 1;
-
-    @include media-breakpoint-down(lg) {
-        gap: .75rem;
-        padding: .3rem 0;
-    }
 }
 
 .page-searchform {
@@ -133,8 +128,7 @@ $pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height
 
 @include media-breakpoint-down(lg) {
     .global-topbar {
-        padding-left: 0;
-        padding-right: 0;
+        padding: .3rem 0;
     }
 
     .logo-xl {
@@ -153,7 +147,7 @@ $pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height
 
     .main-search-area {
         gap: .75rem;
-        padding: .3rem 0;
+        padding-right: calc(var(--bs-gutter-x) * .5);
     }
 
     .global-search {
