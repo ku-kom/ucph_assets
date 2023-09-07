@@ -20013,12 +20013,6 @@ body {
   align-items: center;
   flex-shrink: 1;
 }
-@media (max-width: 991.98px) {
-  .main-search-area {
-    gap: 0.75rem;
-    padding: 0.3rem 0;
-  }
-}
 
 .page-searchform {
   flex-grow: 1;
@@ -20045,8 +20039,7 @@ body {
 
 @media (max-width: 991.98px) {
   .global-topbar {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0.3rem 0;
   }
   .logo-xl {
     display: none;
@@ -20059,7 +20052,7 @@ body {
   }
   .main-search-area {
     gap: 0.75rem;
-    padding: 0.3rem 0;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
   }
   .global-search {
     position: absolute;
