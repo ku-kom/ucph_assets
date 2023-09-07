@@ -46,9 +46,11 @@ $grid-gutter-height:            3rem !default;
 //
 $global-menu-transition:        cubic-bezier(.445, .05, .55, .95) !default;
 $global-menu-transition-duration: .35s !default;
-$global-topbar-height:          102px !default;
-$global-menu-height:            62px !default;
+$global-topbar-height:          89px !default;
+$global-menu-height:            50px !default;
 $global-menu-bg:                $gray-f5 !default;
+$global-menu-pipe:              #bcbcbc !default;
+$navbar-nav-link-padding-x:     1.2rem !default;
 $footer-bg:                     #555 !default;
 $scrolltotop-bg:                #a1a1a1 !default;
 

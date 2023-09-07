@@ -16947,7 +16947,7 @@ textarea.form-control-lg {
   --bs-navbar-brand-font-size: 1.25rem;
   --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
   --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
-  --bs-navbar-nav-link-padding-x: 0.5rem;
+  --bs-navbar-nav-link-padding-x: 1.2rem;
   --bs-navbar-toggler-padding-y: 0.25rem;
   --bs-navbar-toggler-padding-x: 0.75rem;
   --bs-navbar-toggler-font-size: 1.25rem;
@@ -19974,7 +19974,7 @@ body {
   align-items: center;
   z-index: 1000;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   height: 100%;
   transition: all 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
@@ -19993,7 +19993,7 @@ body {
 }
 
 .pageheader-spacer {
-  min-height: calc(62px + 1.5rem);
+  min-height: calc(50px + 1.5rem);
 }
 
 .logo-area {
@@ -20096,16 +20096,20 @@ body {
   }
 }
 @media (min-width: 992px) {
+  .logo-xl {
+    height: 64px;
+    width: auto;
+  }
   .logo-sm,
   .logo-md {
     display: none;
   }
   .pageheader-spacer {
-    min-height: calc(102px + 62px + 1.5rem);
+    min-height: calc(89px + 50px + 1.5rem);
   }
   .top-section .global-topbar {
     transition: all 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    height: 102px;
+    height: 89px;
   }
   .top-section.is-small .global-topbar {
     height: 70px;
@@ -20114,22 +20118,38 @@ body {
     display: block;
   }
   .global-menu {
-    height: 62px;
+    height: 50px;
   }
   .global-nav {
     background-color: #f5f5f5;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     left: 0;
     max-height: 100%;
-    overflow: visible;
     position: relative;
     top: 0;
     transition: all 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     width: 100%;
     z-index: 980;
   }
+  .global-nav .navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .globalmenu .nav-item {
+    position: relative;
+  }
   .globalmenu .nav-item:first-of-type .nav-link {
     padding-left: 0;
+  }
+  .globalmenu .nav-item + .nav-item::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    height: 50%;
+    width: 1px;
+    background: #bcbcbc;
   }
   .btn-searchoverlay-open,
   .btn-searchoverlay-close,
