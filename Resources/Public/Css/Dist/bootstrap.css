@@ -20223,7 +20223,7 @@ body {
   }
   .footer-section-content summary {
     pointer-events: none;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
   }
   .footer-section-content ul {
     display: block;
@@ -20582,6 +20582,10 @@ section > .grid-row:not([class*=subset-color-]) > .container {
   padding-right: 0;
 }
 section [data-container] section:nth-child(n+2) > .crow-bg-none {
+  padding-top: 0;
+}
+
+.main-content > section:first-of-type > .crow-bg-none {
   padding-top: 0;
 }
 
