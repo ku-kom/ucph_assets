@@ -112,6 +112,17 @@ section {
     }
 }
 
+// First row, no grid, no background
+.main-content {
+    > section {
+        &:first-of-type {
+            >.crow-bg-none {
+                padding-top: 0;
+            }
+        }
+    }
+}
+
 .crow-bg-mg {
     position: absolute;
     top: 0;

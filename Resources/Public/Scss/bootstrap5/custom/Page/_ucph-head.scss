@@ -57,7 +57,8 @@ $pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height
     align-items: center;
     z-index: $zindex-sticky - 20;
     background-color: $white;
-    box-shadow: 0 0 10px rgba($black, .15);
+    //box-shadow: 0 0 10px rgba($black, .15);
+    border-bottom: 1px solid rgba($black, .1);
     height: 100%;
     transition: all $global-menu-transition-duration $global-menu-transition;
 }
@@ -202,6 +203,10 @@ $pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height
 }
 
 @include media-breakpoint-up(lg) {
+    .logo-xl {
+        height: 64px;
+        width: auto;
+    }
 
     .logo-sm,
     .logo-md {
@@ -238,22 +243,43 @@ $pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height
 
     .global-nav {
         background-color: $global-menu-bg;
-        box-shadow: 0 2px 10px rgba($black, .15);
+        //box-shadow: 0 2px 10px rgba($black, .15);
         left: 0;
         max-height: 100%;
-        overflow: visible;
+        // overflow: visible;
         position: relative;
         top: 0;
         transition: all $global-menu-transition-duration $global-menu-transition;
         width: 100%;
         z-index: $zindex-sticky - 40;
+
+        .navbar {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
     }
 
     .globalmenu {
         .nav-item {
+            position: relative;
+
             &:first-of-type {
                 .nav-link {
                     padding-left: 0;
+                }
+            }
+
+            +.nav-item {
+                &::before {
+                    content: " ";
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+                    height: 50%;
+                    width: 1px;
+                    background: $global-menu-pipe;
                 }
             }
         }
