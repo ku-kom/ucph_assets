@@ -18,10 +18,6 @@ $pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height
     }
 }
 
-.site-logo {
-    animation: fade-in .8s;
-}
-
 @if $enable-transitions {
     @keyframes fade-in {
         0% {
@@ -40,6 +36,10 @@ $pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height
         // When scrolling down
         .logo-xl {
             display: none;
+        }
+
+        .site-logo {
+            animation: fade-in .8s;
         }
     }
 }
@@ -100,7 +100,6 @@ $pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    flex-shrink: 1;
 }
 
 .page-searchform {
