@@ -1,4 +1,4 @@
-$pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height} + 1.5rem) !default;
+$pageheader-height: calc(#{$global-topbar-height} + #{$global-menu-height}) !default;
 
 .skippy {
     flex: none;
@@ -18,6 +18,10 @@ $pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height
     }
 }
 
+.site-logo {
+    animation: fade-in .8s;
+}
+
 @if $enable-transitions {
     @keyframes fade-in {
         0% {
@@ -31,24 +35,18 @@ $pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height
 }
 
 .top-section {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: $pageheader-height;
+
     &.is-small {
 
         // When scrolling down
         .logo-xl {
             display: none;
         }
-
-        .site-logo {
-            animation: fade-in .8s;
-        }
     }
-}
-
-.header-navigation {
-    position: fixed;
-    z-index: $zindex-sticky;
-    width: 100%;
-    transition: margin-top .5s, box-shadow .4s;
 }
 
 .global-topbar {
@@ -67,19 +65,14 @@ $pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height
     position: relative;
     padding: 0;
     top: 0;
-    max-height: 100%;
+    // max-height: 100%;
     width: 100%;
     transition: top $global-menu-transition-duration $global-menu-transition;
 
     &.is-up {
-        max-height: 0;
+        // max-height: 0;
         top: -115px;
     }
-}
-
-// Push down content below sticky page header
-.pageheader-spacer {
-    min-height: calc(#{$global-menu-height} + 1.5rem);
 }
 
 // Logo area
@@ -100,6 +93,7 @@ $pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    flex-shrink: 1;
 }
 
 .page-searchform {
@@ -182,6 +176,8 @@ $pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height
     }
 
     .top-section {
+        position: sticky;
+
         &.is-small {
 
             .logo-sm {
@@ -206,18 +202,17 @@ $pageheader-spacer-height: calc(#{$global-topbar-height} + #{$global-menu-height
         display: none;
     }
 
-    // Push down content below sticky page header
-    .pageheader-spacer {
-        min-height: $pageheader-spacer-height;
-    }
-
     .top-section {
+        will-change: transform;
+
         .global-topbar {
             transition: all $global-menu-transition-duration $global-menu-transition;
             height: $global-topbar-height;
         }
 
         &.is-small {
+            //position: fixed;
+            z-index: $zindex-sticky;
 
             // Height when scrolled
             .global-topbar {
