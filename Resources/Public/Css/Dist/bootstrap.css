@@ -19957,8 +19957,8 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 1020;
   width: 100%;
-  height: calc(89px + 50px);
 }
 .top-section.is-small .logo-xl {
   display: none;
@@ -20071,10 +20071,6 @@ body {
   .logo-md {
     display: block;
   }
-  .top-section {
-    position: -webkit-sticky;
-    position: sticky;
-  }
   .top-section.is-small .logo-sm {
     display: block;
   }
@@ -20092,14 +20088,12 @@ body {
     display: none;
   }
   .top-section {
+    height: calc(89px + 50px);
     will-change: transform;
   }
   .top-section .global-topbar {
     transition: all 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     height: 89px;
-  }
-  .top-section.is-small {
-    z-index: 1020;
   }
   .top-section.is-small .global-topbar {
     height: 70px;

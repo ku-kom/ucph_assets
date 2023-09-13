@@ -37,8 +37,8 @@ $pageheader-height: calc(#{$global-topbar-height} + #{$global-menu-height}) !def
 .top-section {
     position: sticky;
     top: 0;
+    z-index: $zindex-sticky;
     width: 100%;
-    height: $pageheader-height;
 
     &.is-small {
 
@@ -176,8 +176,6 @@ $pageheader-height: calc(#{$global-topbar-height} + #{$global-menu-height}) !def
     }
 
     .top-section {
-        position: sticky;
-
         &.is-small {
 
             .logo-sm {
@@ -203,6 +201,7 @@ $pageheader-height: calc(#{$global-topbar-height} + #{$global-menu-height}) !def
     }
 
     .top-section {
+        height: $pageheader-height;
         will-change: transform;
 
         .global-topbar {
@@ -212,7 +211,7 @@ $pageheader-height: calc(#{$global-topbar-height} + #{$global-menu-height}) !def
 
         &.is-small {
             //position: fixed;
-            z-index: $zindex-sticky;
+            //z-index: $zindex-sticky;
 
             // Height when scrolled
             .global-topbar {

@@ -138,7 +138,7 @@ window.addEventListener('DOMContentLoaded', () => {
             pageHeader.classList.toggle('is-small', scollPosition > 100);
         }
     }
-    //animatePageHeader();
+    animatePageHeader();
 
     /**
      * Animate global menu
@@ -161,7 +161,7 @@ window.addEventListener('DOMContentLoaded', () => {
         // else is horizontal scroll
         lastScrollTop = scrollposition <= 0 ? 0 : scrollposition;
     }
-    //animateMainmenu();
+    animateMainmenu();
 
     /**
      * Show/hide "scroll to top" if it exists
