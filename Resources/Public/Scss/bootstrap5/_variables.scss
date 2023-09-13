@@ -61,20 +61,29 @@ $enable-dark-mode:               false !default;
 
 // Icons
 //
-$bootstrap-icons-font: "bootstrap-icons" !default;
+$bootstrap-icons-font:          "bootstrap-icons" !default;
 // Import Bootstrap Icons w/ custom path to fonts folder
-$bootstrap-icons-font-dir: "../../Fonts/bootstrap-icons" !default;
+$bootstrap-icons-font-dir:      "../../Fonts/bootstrap-icons" !default;
 
 // Typography
 //
-$blockquote-font-size:        $font-size-base * 1.3 !default;
-$blockquote-footer-font-size: $font-size-base * 1.1 !default;
+$blockquote-font-size:          $font-size-base * 1.3 !default;
+$blockquote-footer-font-size:   $font-size-base * 1.1 !default;
 
 // Accessibility
 //
-$focus-ring-width:      .15rem !default;
+$focus-ring-width:              .15rem !default;
 
 // Cards
 //
-$card-height: 24rem !default;
-$card-inner-border-radius: 0 !default;
+$card-height:                   24rem !default;
+$card-inner-border-radius:      0 !default;
+
+// Accordions
+//
+$accordion-font-size:          1.25rem !default;
+$accordion-border-color:       #aeaeae !default;
+$accordion-button-bg:          #f8f8f8 !default;
+$accordion-button-bg-hover:    #ededed !default;
+$accordion-button-active-bg:   #fff !default;
+$accordion-button-active-color: $body-color !default;
