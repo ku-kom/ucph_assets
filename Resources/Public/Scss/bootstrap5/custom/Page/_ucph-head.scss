@@ -29,13 +29,11 @@
 }
 
 .top-section {
+    position: sticky;
+    top: 0;
+    z-index: $zindex-sticky;
 
     &.is-small {
-
-        // When scrolling down
-        .logo-xl {
-            display: none;
-        }
 
         .site-logo {
             animation: fade-in .8s;
@@ -53,20 +51,6 @@
     border-bottom: 1px solid rgba($black, .1);
     height: 100%;
     transition: all $global-menu-transition-duration $global-menu-transition;
-}
-
-.global-menu {
-    position: relative;
-    padding: 0;
-    transform: translateY(0);
-    max-height: 100%;
-    width: 100%;
-    transition: transform $global-menu-transition-duration $global-menu-transition;
-
-    &.is-up {
-        max-height: 0;
-        transform: translateY(-115px);
-    }
 }
 
 // Logo area
@@ -184,6 +168,21 @@
 
 @include media-breakpoint-up(lg) {
 
+    .global-menu {
+        height: $global-menu-height;
+        position: relative;
+        padding: 0;
+        transform: translateY(0);
+        max-height: 100%;
+        width: 100%;
+        transition: transform $global-menu-transition-duration $global-menu-transition;
+
+        &.is-up {
+            max-height: 0;
+            transform: translateY(-115px);
+        }
+    }
+
     .logo-xl {
         height: 64px;
         width: auto;
@@ -195,10 +194,6 @@
     }
 
     .top-section {
-        position: sticky;
-        top: 0;
-        z-index: $zindex-sticky;
-        width: 100%;
         height: calc(#{$global-topbar-height} + #{$global-menu-height});
 
         .global-topbar {
@@ -208,9 +203,13 @@
 
         &.is-small {
 
-            // Height when scrolled
+            // When scrolling down
             .global-topbar {
                 height: 70px;
+            }
+
+            .logo-xl {
+                display: none;
             }
 
             .logo-sm {
@@ -219,19 +218,9 @@
         }
     }
 
-    .global-menu {
-        height: $global-menu-height;
-    }
-
     .global-nav {
         background-color: $global-menu-bg;
-        //box-shadow: 0 2px 10px rgba($black, .15);
-        left: 0;
-        max-height: 100%;
-        position: relative;
-        top: 0;
         transition: all $global-menu-transition-duration $global-menu-transition;
-        width: 100%;
         z-index: $zindex-sticky - 40;
 
         .navbar {
