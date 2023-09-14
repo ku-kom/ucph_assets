@@ -5,7 +5,18 @@ html {
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
     letter-spacing: .3px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main-section {
+    flex: 1;
 }
 
 .main-content {

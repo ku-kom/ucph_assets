@@ -131,6 +131,9 @@ window.addEventListener('DOMContentLoaded', () => {
      * Animate page header
      */
     const animatePageHeader = () => {
+        if (isMobile()) {
+            return;
+        }
         const pageHeader = document.getElementById('page-header');
         // multiple checks for browser compatibility:
         let scollPosition = window.pageYOffset || document.documentElement.scrollTop;
@@ -146,6 +149,9 @@ window.addEventListener('DOMContentLoaded', () => {
      */
     let lastScrollTop = 160;
     const animateMainmenu = () => {
+        if (isMobile()) {
+            return;
+        }
         const pageHeader = document.getElementById('global-menu');
         if (!pageHeader) {
             return;
