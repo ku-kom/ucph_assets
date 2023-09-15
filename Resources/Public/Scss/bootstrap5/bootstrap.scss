@@ -2,13 +2,14 @@
 // DO NOT change the order of the imports
 @import "../../../../node_modules/bootstrap/scss/functions";
 
+// Override variables
 @import "variables";
-
-@import "../../../../node_modules/bootstrap/scss/variables";
-@import "../../../../node_modules/bootstrap/scss/variables-dark";
 
 // Bootstrap icons
 @import "../../../../node_modules/bootstrap-icons/font/bootstrap-icons";
+
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/variables-dark";
 
 // Utilities from node_modules
 @import "utilities";
@@ -38,3 +39,4 @@
 @import "../../../../../ucph_content_image_with_overlay/Resources/Public/Scss/image-overlay";
 @import "../../../../../ucph_page_scrollindicator/Resources/Public/Scss/scrollindicator";
 @import "../../../../../ucph_content_accordions/Resources/Public/Scss/ucph-ce-accordions";
+@import "../../../../../ucph_content_box/Resources/Public/Scss/box";
