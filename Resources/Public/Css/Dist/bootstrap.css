@@ -20679,36 +20679,42 @@ body {
 
 .color-set-1 .subset-color-1 {
   --crow-background: 184, 215, 222;
+  --crow-background-hover: 170, 207, 215;
   --crow-color: 0, 0, 0;
   --crow-link-color: 0, 0, 0;
   --crow-link-hover-color: 0, 0, 0;
 }
 .color-set-1 .subset-color-2 {
   --crow-background: 217, 62, 38;
+  --crow-background-hover: 217, 62, 38;
   --crow-color: 255, 255, 255;
   --crow-link-color: 255, 255, 255;
   --crow-link-hover-color: 255, 255, 255;
 }
 .color-set-1 .subset-color-3 {
   --crow-background: 226, 224, 223;
+  --crow-background-hover: 226, 224, 223;
   --crow-color: 0, 0, 0;
   --crow-link-color: black-rgb;
   --crow-link-hover-color: black-rgb;
 }
 .color-set-1 .subset-color-4 {
   --crow-background: 61, 61, 62;
+  --crow-background-hover: 61, 61, 62;
   --crow-color: 255, 255, 255;
   --crow-link-color: 255, 255, 255;
   --crow-link-hover-color: 255, 255, 255;
 }
 .color-set-1 .subset-color-5 {
   --crow-background: 145, 29, 32;
+  --crow-background-hover: 145, 29, 32;
   --crow-color: 255, 255, 255;
   --crow-link-color: 255, 255, 255;
   --crow-link-hover-color: 255, 255, 255;
 }
 .color-set-1 .subset-color-6 {
   --crow-background: 102, 102, 103;
+  --crow-background-hover: 102, 102, 103;
   --crow-color: 255, 255, 255;
   --crow-link-color: 255, 255, 255;
   --crow-link-hover-color: 255, 255, 255;
@@ -20716,36 +20722,42 @@ body {
 
 .color-set-2 .subset-color-1 {
   --crow-background: 142, 179, 162;
+  --crow-background-hover: 142, 179, 162;
   --crow-color: 255, 255, 255;
   --crow-link-color: 255, 255, 255;
   --crow-link-hover-color: 255, 255, 255;
 }
 .color-set-2 .subset-color-2 {
   --crow-background: 66, 50, 58;
+  --crow-background-hover: 66, 50, 58;
   --crow-color: 255, 255, 255;
   --crow-link-color: 255, 255, 255;
   --crow-link-hover-color: 255, 255, 255;
 }
 .color-set-2 .subset-color-3 {
   --crow-background: 84, 110, 117;
+  --crow-background-hover: 84, 110, 117;
   --crow-color: 255, 255, 255;
   --crow-link-color: 255, 255, 255;
   --crow-link-hover-color: 255, 255, 255;
 }
 .color-set-2 .subset-color-4 {
   --crow-background: 145, 165, 169;
+  --crow-background-hover: 145, 165, 169;
   --crow-color: 255, 255, 255;
   --crow-link-color: 255, 255, 255;
   --crow-link-hover-color: 255, 255, 255;
 }
 .color-set-2 .subset-color-5 {
   --crow-background: 242, 89, 34;
+  --crow-background-hover: 242, 89, 34;
   --crow-color: 255, 255, 255;
   --crow-link-color: 255, 255, 255;
   --crow-link-hover-color: 255, 255, 255;
 }
 .color-set-2 .subset-color-6 {
   --crow-background: 191, 225, 234;
+  --crow-background-hover: 191, 225, 234;
   --crow-color: 0, 0, 0;
   --crow-link-color: 0, 0, 0;
   --crow-link-hover-color: 0, 0, 0;
@@ -20753,36 +20765,42 @@ body {
 
 .color-set-3 .subset-color-1 {
   --crow-background: 201, 215, 216;
+  --crow-background-hover: 201, 215, 216;
   --crow-color: 0, 0, 0;
   --crow-link-color: 0, 0, 0;
   --crow-link-hover-color: 0, 0, 0;
 }
 .color-set-3 .subset-color-2 {
   --crow-background: 155, 171, 178;
+  --crow-background-hover: 155, 171, 178;
   --crow-color: 255, 255, 255;
   --crow-link-color: 255, 255, 255;
   --crow-link-hover-color: 255, 255, 255;
 }
 .color-set-3 .subset-color-3 {
   --crow-background: 124, 145, 148;
+  --crow-background-hover: 124, 145, 148;
   --crow-color: 255, 255, 255;
   --crow-link-color: 255, 255, 255;
   --crow-link-hover-color: 255, 255, 255;
 }
 .color-set-3 .subset-color-4 {
   --crow-background: 244, 247, 240;
+  --crow-background-hover: 244, 247, 240;
   --crow-color: 0, 0, 0;
   --crow-link-color: 0, 0, 0;
   --crow-link-hover-color: 0, 0, 0;
 }
 .color-set-3 .subset-color-5 {
   --crow-background: 188, 171, 153;
+  --crow-background-hover: 188, 171, 153;
   --crow-color: 0, 0, 0;
   --crow-link-color: 0, 0, 0;
   --crow-link-hover-color: 0, 0, 0;
 }
 .color-set-3 .subset-color-6 {
   --crow-background: 66, 50, 58;
+  --crow-background-hover: 66, 50, 58;
   --crow-color: 255, 255, 255;
   --crow-link-color: 255, 255, 255;
   --crow-link-hover-color: 255, 255, 255;
@@ -20790,36 +20808,42 @@ body {
 
 .color-set-4 .subset-color-1 {
   --crow-background: 134, 151, 166;
+  --crow-background-hover: 134, 151, 166;
   --crow-color: 255, 255, 255;
   --crow-link-color: 255, 255, 255;
   --crow-link-hover-color: 255, 255, 255;
 }
 .color-set-4 .subset-color-2 {
   --crow-background: 90, 117, 140;
+  --crow-background-hover: 84, 108, 125;
   --crow-color: 255, 255, 255;
   --crow-link-color: 255, 255, 255;
   --crow-link-hover-color: 255, 255, 255;
 }
 .color-set-4 .subset-color-3 {
   --crow-background: 2, 48, 89;
+  --crow-background-hover: 2, 48, 89;
   --crow-color: 255, 255, 255;
   --crow-link-color: 255, 255, 255;
   --crow-link-hover-color: 255, 255, 255;
 }
 .color-set-4 .subset-color-4 {
   --crow-background: 217, 195, 176;
+  --crow-background-hover: 217, 195, 176;
   --crow-color: 0, 0, 0;
   --crow-link-color: 0, 0, 0;
   --crow-link-hover-color: 0, 0, 0;
 }
 .color-set-4 .subset-color-5 {
   --crow-background: 192, 205, 213;
+  --crow-background-hover: 192, 205, 213;
   --crow-color: 0, 0, 0;
   --crow-link-color: 0, 0, 0;
   --crow-link-hover-color: 0, 0, 0;
 }
 .color-set-4 .subset-color-6 {
   --crow-background: 255, 189, 56;
+  --crow-background-hover: 255, 189, 56;
   --crow-color: 0, 0, 0;
   --crow-link-color: 0, 0, 0;
   --crow-link-hover-color: 0, 0, 0;
@@ -20827,36 +20851,42 @@ body {
 
 .color-set-5 .subset-color-1 {
   --crow-background: 134, 151, 166;
+  --crow-background-hover: 134, 151, 166;
   --crow-color: 255, 255, 255;
   --crow-link-color: 255, 255, 255;
   --crow-link-hover-color: 255, 255, 255;
 }
 .color-set-5 .subset-color-2 {
   --crow-background: 90, 117, 140;
+  --crow-background-hover: 85, 111, 133;
   --crow-color: 255, 255, 255;
   --crow-link-color: 255, 255, 255;
   --crow-link-hover-color: 255, 255, 255;
 }
 .color-set-5 .subset-color-3 {
   --crow-background: 2, 48, 89;
+  --crow-background-hover: 2, 48, 89;
   --crow-color: 255, 255, 255;
   --crow-link-color: 255, 255, 255;
   --crow-link-hover-color: 255, 255, 255;
 }
 .color-set-5 .subset-color-4 {
   --crow-background: 217, 195, 176;
+  --crow-background-hover: 217, 195, 176;
   --crow-color: 0, 0, 0;
   --crow-link-color: 0, 0, 0;
   --crow-link-hover-color: 0, 0, 0;
 }
 .color-set-5 .subset-color-5 {
   --crow-background: 192, 205, 213;
+  --crow-background-hover: 192, 205, 213;
   --crow-color: 0, 0, 0;
   --crow-link-color: 0, 0, 0;
   --crow-link-hover-color: 0, 0, 0;
 }
 .color-set-5 .subset-color-6 {
   --crow-background: 255, 189, 56;
+  --crow-background-hover: 255, 189, 56;
   --crow-color: 0, 0, 0;
   --crow-link-color: 0, 0, 0;
   --crow-link-hover-color: 0, 0, 0;
@@ -21324,6 +21354,53 @@ figure figcaption {
 }
 .accordion-button.collapsed:hover {
   background-color: #ededed;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-size: calc(1.255rem + 0.06vw);
+  font-weight: 600;
+  border-radius: var(--bs-border-radius);
+  min-height: 200px;
+  color: rgba(var(--crow-color), 1);
+  background-color: rgba(var(--crow-background), 1);
+  transition: background-color 0.3s linear;
+}
+@media (min-width: 1200px) {
+  .box {
+    font-size: 1.3rem;
+  }
+}
+
+.box-img img {
+  height: 100%;
+  min-width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.box-text {
+  padding: calc(var(--bs-gutter-x) * 0.5);
+}
+
+.box-link {
+  display: block;
+  text-decoration: none;
+}
+.box-link:hover .box {
+  background-color: rgba(var(--crow-background-hover), 1);
+}
+.box-link .box::before {
+  font-family: "bootstrap-icons";
+  content: "\f135";
+  color: inherit;
+  font-size: 2rem;
+  -webkit-text-stroke: 1px;
+  bottom: 1rem;
+  right: 1rem;
+  position: absolute;
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
