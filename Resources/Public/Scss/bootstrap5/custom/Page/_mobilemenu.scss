@@ -1,0 +1,18 @@
+@include media-breakpoint-up(down) {
+    .catchLeftMenu {
+        margin-top: var(--bs-offcanvas-padding-y);
+        padding-top: var(--bs-offcanvas-padding-y);
+        border-top: 1px solid $gray-200;
+    }
+    .offcanvas-body {
+        .nav-item {
+            &.active {
+                color: mix($black, $link-color, 30%);
+
+                .navbar-nav {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+}

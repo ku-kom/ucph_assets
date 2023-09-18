@@ -20200,6 +20200,19 @@ textarea.form-control-lg {
     mask-position: -200% 0%;
   }
 }
+.catchLeftMenu {
+  margin-top: var(--bs-offcanvas-padding-y);
+  padding-top: var(--bs-offcanvas-padding-y);
+  border-top: 1px solid #e9ecef;
+}
+
+.offcanvas-body .nav-item.active {
+  color: #094db1;
+}
+.offcanvas-body .nav-item.active .navbar-nav {
+  margin-left: 1rem;
+}
+
 @font-face {
   font-family: "Open Sans";
   src: url("../../Fonts/open-sans/OpenSans-300.woff2") format("woff2"), url("../../Fonts/open-sans/OpenSans-300.woff") format("woff"), url("../../Fonts/open-sans/OpenSans-300.ttf") format("truetype");
@@ -20669,17 +20682,15 @@ body {
   text-decoration: none;
 }
 
-.subnav-nav {
-  padding-left: 0;
-  list-style-type: none;
+.ku-leftmenu .nav-link {
+  --bs-nav-link-padding-y: .3rem;
+  color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+  text-decoration: underline;
 }
-.subnav-nav .active .subnav-link {
+.ku-leftmenu .nav-item.active {
   color: #094db1;
 }
-.subnav-nav .active .subnav-link.current {
-  color: #252525;
-}
-.subnav-nav .subnav-nav {
+.ku-leftmenu .nav-item.active .navbar-nav {
   margin-left: 1rem;
 }
 
