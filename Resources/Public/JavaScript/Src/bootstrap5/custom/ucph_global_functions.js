@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     runFooter();
 
     const createMobileMenu = () => {
-        const leftMenuList = document.querySelectorAll('.ku-leftmenu > nav > .subnav-nav');
+        const leftMenuList = document.querySelectorAll('.ku-leftmenu > nav > .navbar-nav');
         class MobileMenu {
             constructor(leftmenu) {
                 this.leftmenu = leftmenu;
@@ -136,11 +136,10 @@ document.addEventListener('DOMContentLoaded', () => {
              */
             getItems() {
                 if (isMobile()) {
-                    const content = this.leftmenu;
                     const target = document.querySelector('.catchLeftMenu');
-                    if (content && target) {
+                    if (target) {
                         target.innerHTML = '';
-                        target.insertAdjacentHTML('beforeend', content.outerHTML);
+                        target.insertAdjacentHTML('beforeend', this.leftmenu.outerHTML);
                         document.querySelector('.ku-leftmenu').innerHTML = '';
                     }
                 }
