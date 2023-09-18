@@ -265,4 +265,9 @@
         max-width: 85%;
         transform: translateY(0);
     }
+
+    // Hide remainers of mobile menu items
+    .offcanvas-body .subnav-nav {
+        display: none;
+    }
 }
