@@ -21374,14 +21374,13 @@ figure figcaption {
 }
 
 .box-img img {
-  height: 100%;
-  min-width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }
 
 .box-text {
   padding: calc(var(--bs-gutter-x) * 0.5);
+  padding-right: 2.5rem;
 }
 
 .box-link {
@@ -21396,7 +21395,6 @@ figure figcaption {
   content: "\f135";
   color: inherit;
   font-size: 2rem;
-  -webkit-text-stroke: 1px;
   bottom: 1rem;
   right: 1rem;
   position: absolute;
