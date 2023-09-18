@@ -209,23 +209,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     animateMainmenu();
 
-    /**
-     * Show/hide "scroll to top" if it exists
-     */
-    const scrollToTopIcon = () => {
-        const scrollToTop = document.getElementById('scrollToTop');
-        // multiple checks for browser compatibility:
-        let scollPosition = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollToTop) {
-            scrollToTop.classList.toggle('show', scollPosition > 60);
-        }
-    }
-    scrollToTopIcon();
-
     window.addEventListener('scroll', () => {
         animateHeader();
         animateMainmenu();
-        scrollToTopIcon();
     }, {
         passive: true
     });

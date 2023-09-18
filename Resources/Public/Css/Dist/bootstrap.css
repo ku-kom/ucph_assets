@@ -20644,18 +20644,42 @@ body {
   }
 }
 .scrolltop {
+  opacity: 0;
   position: fixed;
-  bottom: 3%;
-  right: 2%;
-  width: 40px;
-  height: 40px;
   color: #fff;
   z-index: 1030;
+  bottom: calc(1.305rem + 0.66vw);
+  right: calc(1.295rem + 0.54vw);
+  width: calc(1.365rem + 1.38vw);
+  height: calc(1.365rem + 1.38vw);
   font-size: calc(1.325rem + 0.9vw);
   cursor: pointer;
   background-color: #a1a1a1;
+  text-decoration: none;
+  box-sizing: content-box;
   border-radius: 50%;
-  padding: 0.5rem;
+  padding: 0.3rem;
+  transition: opacity 0.15s linear;
+}
+@media (min-width: 1200px) {
+  .scrolltop {
+    bottom: 1.8rem;
+  }
+}
+@media (min-width: 1200px) {
+  .scrolltop {
+    right: 1.7rem;
+  }
+}
+@media (min-width: 1200px) {
+  .scrolltop {
+    width: 2.4rem;
+  }
+}
+@media (min-width: 1200px) {
+  .scrolltop {
+    height: 2.4rem;
+  }
 }
 @media (min-width: 1200px) {
   .scrolltop {
@@ -20673,6 +20697,10 @@ body {
   box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25);
   outline-offset: 1px;
   border: 1px solid #fff;
+}
+
+.is-small ~ .footer-section .scrolltop {
+  opacity: 1;
 }
 
 .nav-title-link {
