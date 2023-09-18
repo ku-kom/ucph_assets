@@ -121,6 +121,65 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     runFooter();
+
+    const createMobileMenu = () => {
+        const leftMenuList = document.querySelectorAll('.ku-leftmenu > nav > .subnav-nav');
+        class MobileMenu {
+            constructor(leftmenu) {
+                this.leftmenu = leftmenu;
+                this.getItems();
+                this.addEventListeners();
+            }
+
+            /**
+             * Append left menu items to global menu items
+             */
+            getItems() {
+                if (isMobile()) {
+                    const content = this.leftmenu;
+                    const target = document.querySelector('.globalmenu');
+                    if (content && target) {
+                        this.reset();
+                        target.insertAdjacentHTML('afterend', content.outerHTML);
+                    }
+                } else {
+                    this.reset();
+                    // Put left menu back
+                    document.querySelector('.ku-leftmenu').insertAdjacentHTML('beforeend', this.leftmenu.outerHTML);
+                }
+            }
+
+            reset() {
+                // Remove left emnu items from global menu
+                const temp = document.querySelectorAll('.offcanvas-body .subnav-nav');
+                if (temp) {
+                    temp.forEach((item) => {
+                        item.remove();
+                    });
+                }
+                document.querySelector('.ku-leftmenu').innerHTML = '';
+            }
+
+            addEventListeners() {
+                window.addEventListener('resize', debounce(() => {
+                    this.getItems();
+                }, 120));
+
+                window.addEventListener('orientationchange', debounce(() => {
+                    this.getItems();
+                }, 120));
+            }
+        }
+        /**
+         * Assign class to left menu.
+         */
+        if (leftMenuList) {
+            leftMenuList.forEach((item) => {
+                const menuEl = new MobileMenu(item);
+            });
+        }
+    }
+    createMobileMenu();
 });
 
 

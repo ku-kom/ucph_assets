@@ -20532,6 +20532,9 @@ body {
     max-width: 85%;
     transform: translateY(0);
   }
+  .offcanvas-body .subnav-nav {
+    display: none;
+  }
 }
 .footer-container {
   background-color: #555;
