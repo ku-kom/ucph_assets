@@ -1,6 +1,6 @@
 {
     "sourceMap": {
-        "root": "../src",
+        "root": "../Src/bootstrap5/custom",
         "url": "{file}.map"
     }
 }
