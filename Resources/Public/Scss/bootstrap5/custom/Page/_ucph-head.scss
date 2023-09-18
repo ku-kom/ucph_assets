@@ -97,6 +97,10 @@
 }
 
 @include media-breakpoint-down(lg) {
+    .ku-leftmenu {
+        display: none;
+    }
+
     .global-topbar {
         padding: .3rem 0;
     }
@@ -267,7 +271,7 @@
     }
 
     // Hide remainers of mobile menu items
-    .offcanvas-body .subnav-nav {
+    .catchLeftMenu {
         display: none;
     }
 }

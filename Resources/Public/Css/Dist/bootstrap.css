@@ -20409,6 +20409,9 @@ body {
 }
 
 @media (max-width: 991.98px) {
+  .ku-leftmenu {
+    display: none;
+  }
   .global-topbar {
     padding: 0.3rem 0;
   }
@@ -20532,7 +20535,7 @@ body {
     max-width: 85%;
     transform: translateY(0);
   }
-  .offcanvas-body .subnav-nav {
+  .catchLeftMenu {
     display: none;
   }
 }

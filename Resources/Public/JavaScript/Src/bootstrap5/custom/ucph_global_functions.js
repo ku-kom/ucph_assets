@@ -137,27 +137,13 @@ document.addEventListener('DOMContentLoaded', () => {
             getItems() {
                 if (isMobile()) {
                     const content = this.leftmenu;
-                    const target = document.querySelector('.globalmenu');
+                    const target = document.querySelector('.catchLeftMenu');
                     if (content && target) {
-                        this.reset();
-                        target.insertAdjacentHTML('afterend', content.outerHTML);
+                        target.innerHTML = '';
+                        target.insertAdjacentHTML('beforeend', content.outerHTML);
+                        document.querySelector('.ku-leftmenu').innerHTML = '';
                     }
-                } else {
-                    this.reset();
-                    // Put left menu back
-                    document.querySelector('.ku-leftmenu').insertAdjacentHTML('beforeend', this.leftmenu.outerHTML);
                 }
-            }
-
-            reset() {
-                // Remove left emnu items from global menu
-                const temp = document.querySelectorAll('.offcanvas-body .subnav-nav');
-                if (temp) {
-                    temp.forEach((item) => {
-                        item.remove();
-                    });
-                }
-                document.querySelector('.ku-leftmenu').innerHTML = '';
             }
 
             addEventListeners() {
