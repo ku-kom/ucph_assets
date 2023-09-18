@@ -198,7 +198,7 @@
     }
 
     .top-section {
-        height: calc(#{$global-topbar-height} + #{$global-menu-height});
+        height: calc(#{$global-topbar-height} + #{$global-menu-height} + 1.5rem);
 
         .global-topbar {
             transition: all $global-menu-transition-duration $global-menu-transition;
