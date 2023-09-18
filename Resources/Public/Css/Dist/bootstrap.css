@@ -21380,7 +21380,7 @@ figure figcaption {
 
 .box-text {
   padding: calc(var(--bs-gutter-x) * 0.5);
-  padding-bottom: 2.8rem;
+  padding-bottom: 2.9rem;
 }
 
 .box-link {
@@ -21395,9 +21395,10 @@ figure figcaption {
   content: "\f135";
   color: inherit;
   font-size: 2rem;
-  bottom: 0.8rem;
+  bottom: 1rem;
   right: 1rem;
   position: absolute;
+  line-height: normal;
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
