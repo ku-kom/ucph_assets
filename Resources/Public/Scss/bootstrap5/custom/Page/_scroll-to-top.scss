@@ -1,16 +1,20 @@
 .scrolltop {
+    opacity: 0;
     position: fixed;
-    bottom: 3%;
-    right: 2%;
-    width: 40px;
-    height: 40px;
     color: $white;
     z-index: $zindex-fixed;
+    @include rfs(1.8rem, bottom);
+    @include rfs(1.7rem, right);
+    @include rfs(2.4rem, width);
+    @include rfs(2.4rem, height);
     @include font-size(2rem);
     cursor: pointer;
     background-color: $scrolltotop-bg;
+    text-decoration: none;
+    box-sizing: content-box;
     @include border-radius(50%);
-    @include padding(.5rem);
+    @include padding(.3rem);
+    transition: $transition-fade;
 
     .bi {
         display: flex;
@@ -25,5 +29,13 @@
         outline-offset: 1px;
         border: 1px solid $white;
 
+    }
+}
+
+.is-small {
+    ~.footer-section {
+        .scrolltop {
+            opacity: 1;
+        }
     }
 }
