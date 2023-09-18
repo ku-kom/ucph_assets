@@ -20535,7 +20535,7 @@ body {
     max-width: 85%;
     transform: translateY(0);
   }
-  .offcanvas-body .subnav-nav {
+  .catchLeftMenu {
     display: none;
   }
 }

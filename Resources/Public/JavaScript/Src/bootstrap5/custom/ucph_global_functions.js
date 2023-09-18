@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
             getItems() {
                 if (isMobile()) {
                     const content = this.leftmenu;
-                    const target = document.querySelector('#catchLeftMenu');
+                    const target = document.querySelector('.catchLeftMenu');
                     if (content && target) {
                         target.innerHTML = '';
                         target.insertAdjacentHTML('beforeend', content.outerHTML);
