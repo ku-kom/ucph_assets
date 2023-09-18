@@ -165,16 +165,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     createMobileMenu();
-});
-
-
-window.addEventListener('DOMContentLoaded', () => {
-    'use strict';
 
     /**
-     * Animate page header
+     * Animate header
+     * When scroling down, add class.
      */
-    const animatePageHeader = () => {
+    const animateHeader = () => {
         if (isMobile()) {
             return;
         }
@@ -185,7 +181,7 @@ window.addEventListener('DOMContentLoaded', () => {
             pageHeader.classList.toggle('is-small', scollPosition > 100);
         }
     }
-    animatePageHeader();
+    animateHeader();
 
     /**
      * Animate global menu
@@ -227,7 +223,7 @@ window.addEventListener('DOMContentLoaded', () => {
     scrollToTopIcon();
 
     window.addEventListener('scroll', () => {
-        animatePageHeader();
+        animateHeader();
         animateMainmenu();
         scrollToTopIcon();
     }, {
@@ -235,13 +231,12 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('resize', debounce(function () {
-        animatePageHeader();
+        animateHeader();
         animateMainmenu();
     }, 150));
 
     window.addEventListener('orientationchange', debounce(function () {
-        animatePageHeader();
+        animateHeader();
         animateMainmenu();
     }, 150));
-
 });
