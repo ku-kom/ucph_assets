@@ -20363,8 +20363,11 @@ body {
 .top-section {
   position: -webkit-sticky;
   position: sticky;
-  top: var(--ucph-scrollindicator-height, 0);
+  top: 0;
   z-index: 1020;
+}
+.top-section.is-small {
+  top: var(--ucph-scrollindicator-height, 0);
 }
 .top-section.is-small .site-logo {
   animation: fade-in 0.8s;
