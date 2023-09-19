@@ -30,7 +30,8 @@
 
 .top-section {
     position: sticky;
-    top: 0;
+    // If scroll indicator is activated, add it to the height, otherwise 0.
+    top: var(--ucph-scrollindicator-height, 0);
     z-index: $zindex-sticky;
 
     &.is-small {
