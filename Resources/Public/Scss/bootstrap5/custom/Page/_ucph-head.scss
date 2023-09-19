@@ -32,6 +32,7 @@
     position: sticky;
     top: 0;
     z-index: $zindex-sticky;
+    transition: top .2s $global-menu-transition;
 
     &.is-small {
         // If scroll indicator is activated, add it to the height, otherwise 0.
