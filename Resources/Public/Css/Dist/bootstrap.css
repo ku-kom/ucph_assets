@@ -20365,6 +20365,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1020;
+  transition: top 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 .top-section.is-small {
   top: var(--ucph-scrollindicator-height, 0);
