@@ -20363,7 +20363,7 @@ body {
 .top-section {
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: var(--ucph-scrollindicator-height, 0);
   z-index: 1020;
 }
 .top-section.is-small .site-logo {
