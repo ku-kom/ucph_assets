@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Bootstrap Icons v1.11.1 (https://icons.getbootstrap.com/)
+ * Bootstrap Icons v1.10.5 (https://icons.getbootstrap.com/)
  * Copyright 2019-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/icons/blob/main/LICENSE)
  */
@@ -20317,11 +20317,31 @@ body {
   flex: 1;
 }
 
-.main-content img {
+/* 1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210) This can trigger a poorly considered lint error in some tools but is included by design. */
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+}
+
+/* Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14) */
+img,
+video {
   max-width: 100%;
   height: auto;
 }
-.main-content section::after {
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+[hidden] {
+  display: none;
+}
+
+section::after {
   display: block;
   clear: both;
   content: "";
@@ -21246,6 +21266,7 @@ figure figcaption {
   .img-overlay h2, .img-overlay .h2 {
     font-size: 2.25rem;
     line-height: 3.1rem;
+    display: inline-block;
   }
   .img-overlay h2 > span, .img-overlay .h2 > span {
     padding: 0 10px 4px 10px;

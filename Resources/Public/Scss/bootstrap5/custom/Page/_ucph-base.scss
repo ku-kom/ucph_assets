@@ -19,15 +19,36 @@ body {
     flex: 1;
 }
 
-.main-content {
-    img {
-        max-width: 100%;
-        height: auto;
-    }
+/* 1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210) This can trigger a poorly considered lint error in some tools but is included by design. */
 
-    section {
-        @include clearfix();
-    }
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    // 1
+    display: block;
+    // 2
+    vertical-align: middle;
+}
+
+/* Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14) */
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+[hidden] {
+    display: none;
+}
+
+section {
+    @include clearfix();
 }
 
 .page-title {
@@ -37,13 +58,3 @@ body {
 .page-heading {
     margin: 0;
 }
-
-// @each $breakpoint in map-keys($grid-breakpoints) {
-//     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-
-//     @include media-breakpoint-down($breakpoint) {
-//         .textku#{$infix}-image {
-//             background-image: none;
-//         }
-//     }
-// }
