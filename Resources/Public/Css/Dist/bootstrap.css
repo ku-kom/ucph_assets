@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Bootstrap Icons v1.10.5 (https://icons.getbootstrap.com/)
+ * Bootstrap Icons v1.11.1 (https://icons.getbootstrap.com/)
  * Copyright 2019-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/icons/blob/main/LICENSE)
  */
@@ -21266,7 +21266,6 @@ figure figcaption {
   .img-overlay h2, .img-overlay .h2 {
     font-size: 2.25rem;
     line-height: 3.1rem;
-    display: inline-block;
   }
   .img-overlay h2 > span, .img-overlay .h2 > span {
     padding: 0 10px 4px 10px;
@@ -21292,8 +21291,11 @@ figure figcaption {
   }
 }
 
-:root {
+.scroll-indicator {
   --ucph-scrollindicator-height: .5rem;
+}
+.scroll-indicator .in-view #page-header {
+  margin-top: var(--ucph-scrollindicator-height);
 }
 
 #horizontal-scroll {
@@ -21316,13 +21318,6 @@ figure figcaption {
   opacity: 1;
   height: var(--ucph-scrollindicator-height);
   z-index: 1024;
-}
-
-.scroll-indicator {
-  height: unset;
-}
-.scroll-indicator .in-view #page-header {
-  margin-top: var(--ucph-scrollindicator-height);
 }
 
 :root {
