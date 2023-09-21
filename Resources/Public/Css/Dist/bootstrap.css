@@ -20510,7 +20510,7 @@ section::after {
   }
   .global-menu.is-up {
     max-height: 0;
-    transform: translateY(-115px);
+    transform: translateY(-50px);
   }
   .logo-xl {
     height: 64px;
@@ -21308,7 +21308,6 @@ figure figcaption {
   background-color: var(--bs-gray-200);
   border-radius: 0;
   opacity: 0;
-  transition: height 0.3s;
 }
 #horizontal-scroll .progress-bar {
   background-color: var(--bs-red);
@@ -21317,7 +21316,6 @@ figure figcaption {
 #horizontal-scroll.in-view {
   opacity: 1;
   height: var(--ucph-scrollindicator-height);
-  z-index: 1024;
 }
 
 :root {
