@@ -21250,6 +21250,10 @@ figure figcaption {
   min-width: auto;
 }
 
+.card-container {
+  row-gap: 3rem;
+}
+
 .img-overlay {
   position: relative;
   margin-bottom: 0;
