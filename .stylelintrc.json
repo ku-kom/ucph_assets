@@ -39,6 +39,7 @@
         "scss/dollar-variable-default": null,
         "order/properties-order": null,
         "selector-no-qualifying-type": null,
+        "selector-max-id": null,
         "selector-class-pattern": null
       }
     }

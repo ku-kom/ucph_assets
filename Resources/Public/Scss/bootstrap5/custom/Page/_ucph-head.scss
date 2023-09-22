@@ -34,11 +34,17 @@
     z-index: $zindex-sticky;
 
     &.is-small {
-        // If scroll indicator is activated, add it to the height, otherwise 0.
-        top: var(--ucph-scrollindicator-height, 0);
-
         .site-logo {
             animation: fade-in .8s;
+        }
+    }
+}
+
+#scrollindicator {
+    &.in-view {
+        ~.top-section {
+            // If scroll indicator is activated, add it to the height, otherwise 0.
+            top: var(--ucph-scrollindicator-height, 0);
         }
     }
 }
