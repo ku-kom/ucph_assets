@@ -20386,11 +20386,12 @@ section::after {
   top: 0;
   z-index: 1020;
 }
-.top-section.is-small {
-  top: var(--ucph-scrollindicator-height, 0);
-}
 .top-section.is-small .site-logo {
   animation: fade-in 0.8s;
+}
+
+#scrollindicator.in-view ~ .top-section {
+  top: var(--ucph-scrollindicator-height, 0);
 }
 
 .global-topbar {
@@ -21291,14 +21292,7 @@ figure figcaption {
   }
 }
 
-.scroll-indicator {
-  --ucph-scrollindicator-height: .5rem;
-}
-.scroll-indicator .in-view #page-header {
-  margin-top: var(--ucph-scrollindicator-height);
-}
-
-#horizontal-scroll {
+#scrollindicator {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -21309,13 +21303,13 @@ figure figcaption {
   border-radius: 0;
   opacity: 0;
 }
-#horizontal-scroll .progress-bar {
+#scrollindicator .progress-bar {
   background-color: var(--bs-red);
   width: var(--scrollPercentage);
 }
-#horizontal-scroll.in-view {
+#scrollindicator.in-view {
   opacity: 1;
-  height: var(--ucph-scrollindicator-height);
+  height: var(--ucph-scrollindicator-height, 0.5rem);
 }
 
 :root {
