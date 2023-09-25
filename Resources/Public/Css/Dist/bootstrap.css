@@ -21314,6 +21314,7 @@ figure figcaption {
 #scrollindicator.in-view {
   opacity: 1;
   height: var(--ucph-scrollindicator-height, 0.5rem);
+  z-index: 1024;
 }
 
 :root {
